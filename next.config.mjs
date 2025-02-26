@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   trailingSlash: true,
+ 
   experimental: {
     turbo: true,
   },
@@ -11,7 +12,6 @@ const nextConfig = {
     return [
       {
         source: "/:path*",
-        has: [{ type: "host", value: "www.techcraftinc.com" }],
         destination: "https://techcraftinc.com/:path*",
         permanent: true,
       },
