@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Testimonials } from "@/components/Testimonials";
+
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { webDesign } from "@/data/porfolios";
 import MiddleBannerSection from "@/components/MiddleBannerSection";
@@ -22,11 +23,16 @@ import {
   developmentServices,
   developmentServicesBenifits,
 } from "@/data/services";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const WebsiteDevelopment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
@@ -94,17 +100,17 @@ const WebsiteDevelopment = () => {
                 </div>
               </div>
               {/* ORM ICONS */}
-              <div className="flex items-center gap-4 mt-2 z-50">
-                <a href="#">
+              <div className="flex items-center gap-4 mt-5 z-50">
+                <Link href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
                     className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
@@ -112,8 +118,8 @@ const WebsiteDevelopment = () => {
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                {/* <Link href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
@@ -121,7 +127,7 @@ const WebsiteDevelopment = () => {
                     width={130}
                     height={130}
                   />
-                </a>
+                </Link> */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -147,9 +153,9 @@ const WebsiteDevelopment = () => {
       <BannerSlider />
       {/* TEXT IMAGE SECTION 1*/}
       <div className="w-full">
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724966951/pair-programming-concept-illustration_114360-2170_gafrsm.webp"
                 alt="creative-copywriting1"
@@ -159,7 +165,7 @@ const WebsiteDevelopment = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 Backend Development
               </h5>
@@ -191,7 +197,7 @@ const WebsiteDevelopment = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724967421/developers-use-software-multiple-devices-cross-platform-software-multi-platform-platform-independent-software-concept_335657-1816_f3uxl4.webp"
                 alt="creative-copywriting1"
@@ -200,7 +206,7 @@ const WebsiteDevelopment = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Designing with Your
                 <br />
@@ -234,7 +240,7 @@ const WebsiteDevelopment = () => {
       {/* TEXT IMAGE SECTION 3*/}
       <div className="w-full my-16">
         <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <h2 className="text-4xl text-slate-800 font-bold">
               Visual Communication at Its Best
             </h2>
@@ -261,7 +267,7 @@ const WebsiteDevelopment = () => {
               usability.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724967614/software-engineer-statistician-visualizer-analyst-working-project-big-data-conference-big-data-presentation-data-science-concept_335657-1850_i9puq4.webp"
               alt="copywriting4"
@@ -276,7 +282,7 @@ const WebsiteDevelopment = () => {
       {/* TEXT IMAGE SECTION 4*/}
       <div className="w-full my-16">
         <div className="max-w-6xl mx-auto flex flex-wrap items-center flex-row-reverse">
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <h2 className="text-4xl text-slate-800 font-bold">
               Bridging Platforms with <br /> Flawless Cross-Platform <br /> Apps
             </h2>
@@ -290,7 +296,7 @@ const WebsiteDevelopment = () => {
               users wherever they are.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724968706/smart-speaker-used-by-office-workers-illustration_335657-365_le5qe6.webp"
               alt="copywriting4"
@@ -306,7 +312,7 @@ const WebsiteDevelopment = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex flex-wrap items-center flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724970672/cloud-computing-service-web-hosting-synchronised-information-online-storage-backup-technology-internet-server-cloud-data-center-design-element_335657-2638_imnsra.webp"
                 alt="copywriting5"
@@ -316,7 +322,7 @@ const WebsiteDevelopment = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Unifying User Experiences
                 <br />
@@ -365,7 +371,7 @@ const WebsiteDevelopment = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720741151/development-6_wfdnvy.webp"
                 alt="copywriting5"
@@ -374,7 +380,7 @@ const WebsiteDevelopment = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Personalized Web Design
                 <br />
@@ -459,9 +465,9 @@ const WebsiteDevelopment = () => {
       <div className="py-16 -z-50 bg-[#F9F9F9]">
         {/* Portfolio heading */}
         <div className="max-w-6xl mx-auto" data-aos="zoom-in">
-          <h5 className="text-center text-xl text-[#5114AE] font-semibold">
+          <h2 className="text-center text-xl text-[#5114AE] font-semibold">
             Showcase of Success
-          </h5>
+          </h2>
           <p className="text-center text-base text-[#687087] mt-2">
             Why rely solely on what we say? Explore our successful portfolio and
             see the excellence for yourself.
@@ -501,22 +507,24 @@ const WebsiteDevelopment = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
 
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

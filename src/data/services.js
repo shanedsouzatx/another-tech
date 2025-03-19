@@ -2,7 +2,7 @@ export const ourServices = [
   {
     id: 1,
     title: "Logo Design",
-    para: "Our expert designers craft unique and memorable logos that encapsulate your brand's identity, helping you stand out in a crowded market and make a lasting impression.",
+    para: "Our expert designers craft unique and memorable logos that encapsulate your brand's identity, helping you stand out in a crowded market and make a lasting impression",
   },
   {
     id: 2,
@@ -298,7 +298,7 @@ export const aboutServices = [
   },
   {
     id: 2,
-    title: "E-commerce and WordPress Development",
+    title: "E-commerce Development",
     para: "Launch your online store with our e-commerce and WordPress Development services. We build responsive, fast-loading, user-friendly websites that convert visitors into customers. Tailored to fit your brand, our solutions make managing your online business straightforward and effective. Start selling more today.",
   },
   {

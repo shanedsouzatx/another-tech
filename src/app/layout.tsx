@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import type { Metadata } from "next";
 import { Lato } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MyLayout from "@/components/MyLayout";
 
@@ -106,85 +105,87 @@ export const metadata: Metadata = {
     ],
   },
 
-  // Alternate languages
-  alternates: {
-    canonical: 'https://techcraftinc.com',
-    languages: {
-      'en-US': 'https://techcraftinc.com',
-      'es-ES': 'https://techcraftinc.com',
+    // Alternate languages
+    alternates: {
+      canonical: 'https://techcraftinc.com',
+      languages: {
+        'en-US': 'https://techcraftinc.com',
+        'es-ES': 'https://techcraftinc.com',
+      },
     },
-  },
 
- 
+  
 
-  // Update Schema.org markup in the head section
- 
-};
+    // Update Schema.org markup in the head section
+  
+  };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en">
-      <head>
-        <title>Best Digital Makerting and Software Development Agency | Techcraft</title>
-        <meta name="description" content="Techcraft is a leading digital marketing and software development agency that provides innovative solutions to help businesses grow and succeed in the digital age." />
-        {/* Google Tag Manager */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-NWN5C8N3');
-            `,
-          }}
-        />
-        {/* End Google Tag Manager */}
+  export default function RootLayout({
+    children,
+  }: Readonly<{
+    children: React.ReactNode;
+  }>) {
+    return (
+      <html lang="en">
+        <head>
+          <title>Best Digital Makerting and Software Development Agency | Techcraft</title>
+          <meta name="description" content="Techcraft is a leading digital marketing and software development agency that provides innovative solutions to help businesses grow and succeed in the digital age." />
+          {/* Google Tag Manager */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                })(window,document,'script','dataLayer','GTM-NWN5C8N3');
+              `,
+            }}
+          />
+          {/* End Google Tag Manager */}
 
-        {/* Social Media Profiles */}
-        <link rel="me" href="https://twitter.com/techcraftinc" />
-        <link rel="me" href="https://www.linkedin.com/company/techcraftinc" />
-        <link rel="me" href="https://www.facebook.com/techcraftinc" />
-        <link rel="me" href="https://www.instagram.com/techcraftinc" />
-        <link rel="me" href="https://www.youtube.com/@techcraftinc" />
+          {/* Social Media Profiles */}
+          <link rel="me" href="https://twitter.com/techcraftinc" />
+          <link rel="me" href="https://www.linkedin.com/company/techcraftinc" />
+          <link rel="me" href="https://www.facebook.com/techcraftinc" />
+          <link rel="me" href="https://www.instagram.com/techcraftinc" />
+          <link rel="me" href="https://www.youtube.com/@techcraftinc" />
+          
+          {/* Schema.org markup */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+          />
+
+          {/* Open Graph Protocol */}
+          <meta property="og:type" content="website" />
+          <meta property="og:site_name" content="Techcraft" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="article:publisher" content="https://www.facebook.com/techcraftinc" />
+          
+          {/* Twitter Card */}
+          <meta name="twitter:site" content="@techcraftinc" />
+          <meta name="twitter:creator" content="@techcraftinc" />
+        </head>
+        <body className={lato.className}>
+          {/* Google Tag Manager (noscript) */}
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-NWN5C8N3"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            ></iframe>
+          </noscript>
+          {/* End Google Tag Manager (noscript) */}
+
         
-        {/* Schema.org markup */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
-        />
-
-        {/* Open Graph Protocol */}
-        <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Techcraft" />
-        <meta property="og:locale" content="en_US" />
-        <meta property="article:publisher" content="https://www.facebook.com/techcraftinc" />
-        
-        {/* Twitter Card */}
-        <meta name="twitter:site" content="@techcraftinc" />
-        <meta name="twitter:creator" content="@techcraftinc" />
-      </head>
-      <body className={lato.className}>
-        {/* Google Tag Manager (noscript) */}
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-NWN5C8N3"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          ></iframe>
-        </noscript>
-        {/* End Google Tag Manager (noscript) */}
-
         <MyLayout>
-          <Navbar />
+          {/* <Navbar /> */}
           {children}
-          <Footer />
+          {/* <Footer /> */}
         </MyLayout>
+       
       </body>
     </html>
   );

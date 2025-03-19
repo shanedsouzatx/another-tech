@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Testimonials } from "@/components/Testimonials";
+import Link from "next/link";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { eCommerce } from "@/data/porfolios";
 import BannerSlider from "@/components/BannerSlider";
@@ -15,11 +16,15 @@ import OutlineButton from "@/components/OulineButton";
 import Modal from "@/components/Modal/Modal";
 import CountSection from "@/components/CountSection";
 import AllInOneCombo from "@/components/AllInOneCombo";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const WordpressDevelopment = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
 
@@ -29,9 +34,9 @@ const WordpressDevelopment = () => {
           backgroundImage: `url(${heroBgImgSrc})`,
         }}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between h-full">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between h-full px-4 md:px-0">
           {/* Content */}
-          <div className="w-1/2 h-full flex items-center ">
+          <div className="w-full md:w-1/2 h-full flex items-center mb-8 md:mb-0">
             <div className="w-full">
               <h2 className="text-[#5114AE] font-semibold text-xl md:text-2xl z-50">
                 Wordpress Web Development
@@ -48,31 +53,34 @@ const WordpressDevelopment = () => {
               </p>
 
               {/* ORM ICONS */}
-              <div className="flex items-center gap-4 pt-5 z-50">
-                <a href="#">
+              <div className="flex items-center gap-4 mt-5 z-50">
+                <Link href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                {/* <a href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
+                </a> */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -88,7 +96,7 @@ const WordpressDevelopment = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="w-1/2 h-full flex items-center justify-end">
+          <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end mt-4 md:mt-0">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725057586/w2_ga2ozd.webp"
               alt="wordpress-heroimg"
@@ -107,7 +115,7 @@ const WordpressDevelopment = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725060301/wpd2-01-1-1024x1024_ubhxvy.webp"
                 alt="wordpress1"
@@ -117,7 +125,7 @@ const WordpressDevelopment = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               {/* <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 E-Commerce Marketing
               </h5> */}
@@ -156,7 +164,7 @@ const WordpressDevelopment = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725060472/wpd-01-1024x1024_mneckl.webp"
                 alt="wordpress2"
@@ -165,7 +173,7 @@ const WordpressDevelopment = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 WordPress Plugin
                 <br />
@@ -198,7 +206,7 @@ const WordpressDevelopment = () => {
       {/* TEXT IMAGE SECTION 3*/}
       <div className="w-full my-16">
         <div className="max-w-6xl mx-auto flex flex-wrap">
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <h2 className="text-4xl text-slate-800 font-bold">
               Custom WordPress Solutions
             </h2>
@@ -222,7 +230,7 @@ const WordpressDevelopment = () => {
               effectively.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-full sm:w-1/2">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725060558/wordpress-solutions_bajlid.webp"
               alt="wordpress3"
@@ -239,7 +247,7 @@ const WordpressDevelopment = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725060754/wd2-01-1024x1024_ne1ghw.webp"
                 alt="wordpress4"
@@ -248,7 +256,7 @@ const WordpressDevelopment = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Seamless Connections
                 <br />
@@ -328,22 +336,24 @@ const WordpressDevelopment = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
 
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

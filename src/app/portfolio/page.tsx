@@ -11,7 +11,8 @@ import {
   motionGraphics,
   illustration,
 } from "@/data/porfolios";
-import { Testimonials } from "@/components/Testimonials";
+
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import BannerSlider from "@/components/BannerSlider";
 import { tabs } from "@/constants/TabsArray";
 import { portfoilioBgImgSrc } from "@/constants/CloudinaryImgUrl";
@@ -21,12 +22,16 @@ import Modal from "@/components/Modal/Modal";
 import { closeModal, openModal } from "../utils/HelperFunction";
 import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
+import Navbar1 from "@/components/Navbar1/Navbar1";
+import Footer from "@/components/Footer";
 
 function Portfolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [activeTab, setActiveTab] = useState("Logo Design");
 
   return (
+    <>
+    <Navbar1/>
     <section className="w-full">
       {/* Hero Section */}
       <HeroSection
@@ -123,21 +128,23 @@ function Portfolio() {
       {/* Testimonials section */}
       <div className="my-10 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6" data-aos="zoom-in">
+        {/* <div className="mb-6" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 }
 

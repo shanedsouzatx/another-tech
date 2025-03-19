@@ -2,6 +2,8 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { pricesHeroImgSrc } from "@/constants/CloudinaryImgUrl";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const blogPosts = [
   {
@@ -48,6 +50,8 @@ const blogPosts = [
 
 const BlogPage = () => {
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
@@ -104,6 +108,8 @@ const BlogPage = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

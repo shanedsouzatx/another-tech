@@ -1,9 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { pricesHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import React from "react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const TermsAndConditions = () => {
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
@@ -153,6 +157,8 @@ const TermsAndConditions = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

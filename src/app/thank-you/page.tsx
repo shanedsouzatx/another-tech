@@ -2,9 +2,13 @@ import React from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { ourServices } from "@/data/services";
 import { OurServiceCard } from "@/components/OurServiceCard";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const ThankYou = () => {
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Thank You Section */}
       <div className="bg-[#044E8B] flex justify-center text-white pt-28 pb-20 md:pt-44 md:pb-28">
@@ -37,6 +41,8 @@ const ThankYou = () => {
         </div>
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

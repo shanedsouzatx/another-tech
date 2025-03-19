@@ -14,19 +14,19 @@ const MiddleBannerSection = ({
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <section
-      className="w-fullbg-no-repeat bg-cover text-white"
+      className="w-full bg-no-repeat bg-cover text-white"
       style={{
         backgroundImage: `url(${bannerImgSrc})`,
       }}
     >
-      <div className="max-w-6xl mx-auto flex items-center justify-between py-12">
+      <div className="max-w-6xl  mx-auto flex items-center justify-between py-12 px-4">
         {/* Headings */}
-        <div>
+        <div className="w-full sm:w-1/2">
           <h2 className="text-white text-4xl font-bold">{heading}</h2>
           <h4 className="text-white text-2xl font-medium mt-2">{subHeading}</h4>
         </div>
         {/* Buttons */}
-        <div className="flex items-center gap-2">
+        <div className="w-full sm:w-1/2 flex items-center gap-2">
           <button
             className="bg-white text-gray-700 font-semibold text-sm py-3 px-5 border border-gray-700 rounded-md"
             onClick={() => openModal(setIsModalOpen)}

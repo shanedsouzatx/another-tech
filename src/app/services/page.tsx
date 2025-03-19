@@ -7,10 +7,15 @@ import {
 } from "@/constants/CloudinaryImgUrl";
 import { ourServices } from "@/data/services";
 import { OurServiceCard } from "@/components/OurServiceCard";
-import { Testimonials } from "@/components/Testimonials";
+
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Services = () => {
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <HeroSection
@@ -20,7 +25,7 @@ const Services = () => {
         backDropShadow="linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))"
       />
       {/* Slider */}
-      <div className="mb-20">
+      <div className="mb-10">
         <BannerSlider />
       </div>
 
@@ -40,21 +45,23 @@ const Services = () => {
           </div>
         </div>
       </div>
-
+            
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

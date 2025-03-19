@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Testimonials } from "@/components/Testimonials";
+import Link from "next/link";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { illustration } from "@/data/porfolios";
 import BannerSlider from "@/components/BannerSlider";
@@ -15,11 +16,15 @@ import { closeModal, openModal } from "@/app/utils/HelperFunction";
 import GradientButton from "@/components/GradientButton";
 import OutlineButton from "@/components/OulineButton";
 import LeadForm from "@/components/LeadForm";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const VideoAnimation = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
@@ -92,18 +97,17 @@ const VideoAnimation = () => {
                   </div> */}
                 </div>
               </div>
-              {/* ORM ICONS */}
-              <div className="flex items-center gap-4 mt-2 z-50">
-                <a href="#">
+              <div className="flex items-center gap-4 mt-5 z-50">
+                <Link href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
                     className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
@@ -111,8 +115,8 @@ const VideoAnimation = () => {
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                {/* <Link href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
@@ -120,7 +124,7 @@ const VideoAnimation = () => {
                     width={130}
                     height={130}
                   />
-                </a>
+                </Link> */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -136,7 +140,10 @@ const VideoAnimation = () => {
             </div>
           </div>
           {/* Form */}
+
+          <div className="!mr-32 pr-11">
           <LeadForm />
+          </div>
         </div>
       </div>
       {/* Slider */}
@@ -242,7 +249,7 @@ const VideoAnimation = () => {
       <div className="w-full my-16 px-4 md:px-0">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center flex-wrap">
           {/* Text Content */}
-          <div className="w-full md:w-1/2 flex flex-col items-start">
+          <div className="w-full text-center px-4 flex flex-col">
             <h2 className="text-3xl md:text-4xl text-slate-800 font-bold">
               Stories that Captivate and Engage
             </h2>
@@ -270,7 +277,7 @@ const VideoAnimation = () => {
             </p>
           </div>
           {/* Image */}
-          <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
+          {/* <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-8 md:mt-0">
             <Image
               src="https://techcraftinc.com/wp-content/uploads/2024/02/a5-01-1-1024x1024.webp"
               alt="v-animation3"
@@ -279,7 +286,7 @@ const VideoAnimation = () => {
               objectFit="contain"
               className="mx-auto md:mx-0"
             />
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -546,22 +553,24 @@ const VideoAnimation = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4/>
       </div>
 
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

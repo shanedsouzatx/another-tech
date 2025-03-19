@@ -4,9 +4,13 @@ import React from "react";
 import BannerSlider from "@/components/BannerSlider";
 import { contactHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import HeroSection from "@/components/HeroSection";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 function Contact() {
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <HeroSection
@@ -23,6 +27,8 @@ function Contact() {
         <BannerSlider />
       </div>
     </section>
+    <Footer/>
+    </>
   );
 }
 

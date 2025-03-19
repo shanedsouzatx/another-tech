@@ -1,65 +1,47 @@
+"use client"
+import { useState } from "react";
 import Image from "next/image";
-
+import { motion } from "framer-motion";
+import Link from "next/link";
 const BannerSlider = ({ isMargin }: { isMargin?: boolean }) => {
   const imageSrcs = [
-  //  goodfirms
-    {
-      imgSrc:
-        "https://res.cloudinary.com/dautl8x6a/image/upload/v1724880201/svgexport-1-1024x152_yfbuyo.png",
-      redirectUrl: "#",
-    },
-    // clutch
-    {
-      imgSrc:
-        "https://res.cloudinary.com/dautl8x6a/image/upload/v1724880266/svgexport-1-1-1024x291_efcji4.png",
-      redirectUrl: "https://clutch.co/profile/tech-craft",
-    },
-    // trustpilot
-    {
-      imgSrc:
-        "https://res.cloudinary.com/dautl8x6a/image/upload/v1724880305/532-5329305_transparent-new-trustpilot-logo-hd-png-download-removebg-preview_c2cyz9.png",
-      redirectUrl: "https://www.trustpilot.com/review/techcraftinc.com",
-    },
-    // upfirms
-    {
-      imgSrc:
-        "https://res.cloudinary.com/dautl8x6a/image/upload/v1724880359/svgexport-1-2_c0u4zn.png",
-      redirectUrl: "#",
-    },
-    // bark
-    {
-      imgSrc:
-        "https://res.cloudinary.com/dautl8x6a/image/upload/v1724880391/download-removebg-preview_p7dhpo.png",
-      redirectUrl: "https://www.bark.com/en/us/company/tech-craft-inc/3Q92g/",
-    },
+    { imgSrc: "/assets/images/1.png", redirectUrl: "https://www.goodfirms.co/company/tech-craft-inc" },
+    { imgSrc: "/assets/images/3.png", redirectUrl: "https://clutch.co/profile/tech-craft" },
+    { imgSrc: "/assets/images/2.png", redirectUrl: "https://www.trustpilot.com/review/techcraftinc.com" },
+    { imgSrc: "/assets/images/4.png", redirectUrl: "https://www.bark.com/en/us/company/tech-craft-inc/3Q92g/" },
   ];
 
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    // <div
-    //   className={`${
-    //     isMargin ? "my-10" : ""
-    //   } bg-gradient-to-r from-[#5114AE] to-[#802FCE] overflow-hidden`}
-    //   data-aos="fade-down"
-    // >
     <div
-      className={`${isMargin ? "my-10" : ""} bg-[#33174E]`}
+      className={`${isMargin ? "my-10" : ""} bg-[#100D23] overflow-hidden relative w-full py-16 pt-11`}
       data-aos="fade-down"
     >
-      <div className="max-w-6xl mx-auto py-6">
-        <div className="flex justify-between items-center">
-          {imageSrcs.map((data, index) => (
-            <div key={index} className="cursor-pointer">
-              <a href={data?.redirectUrl} target="_blank">
-                <Image
-                  src={data?.imgSrc}
-                  alt={`cl-${index + 1}`}
-                  width={140}
-                  height={100}
-                />
-              </a>
+      <div
+        className="flex w-max"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <motion.div
+          className="flex space-x-10"
+          initial={{ x: 0 }}
+          animate={{ x: [0, -imageSrcs.length * 200] }}
+          transition={{
+            repeat: Infinity,
+            repeatType: "loop",
+            duration: isHovered ? 10 : 25,
+            ease: "linear",
+          }}
+        >
+          {[...imageSrcs, ...imageSrcs, ...imageSrcs].map((data, index) => (
+            <div key={index} className="cursor-pointer flex-shrink-0">
+              <Link href={data.redirectUrl} target="_blank" rel="noopener noreferrer">
+                <Image src={data.imgSrc} alt={`cl-${index + 1}`} width={200} height={160} className="transition-transform duration-300   hover:scale-110" />
+              </Link>
             </div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

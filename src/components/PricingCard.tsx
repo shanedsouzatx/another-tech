@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaRegCheckCircle } from "react-icons/fa";
 import PricingModal from "./Modal/PricingModal";
 import { closeModal, openModal } from "@/app/utils/HelperFunction";
-
+import Link from "next/link";
 const PricingCard = ({
   title,
   price,
@@ -27,7 +27,7 @@ const PricingCard = ({
       <h2 className="font-bold text-2xl mb-6">{title}</h2>
 
       {/* Original Price */}
-      <h5 className="text-slate-800 font-semibold">Original Price</h5>
+      <h2 className="text-slate-800 font-semibold">Original Price</h2>
 
       {/* Pricing Scroll */}
       <div className="w-full overflow-y-scroll max-h-44 my-5">
@@ -66,9 +66,9 @@ const PricingCard = ({
 
       {/* Contact Links */}
       <div className="flex items-center justify-between mt-2">
-        <a href="tel:+18583650790" className="text-sm text-[#5114AE] font-bold">
+        <Link href="tel:+18583650790" className="text-sm text-[#5114AE] font-bold">
           (667) 423-5532
-        </a>
+        </Link>
         <div
           className="pr-10"
           onClick={() => {

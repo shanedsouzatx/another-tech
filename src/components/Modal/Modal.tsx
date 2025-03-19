@@ -56,33 +56,34 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose }) => {
   const onSubmit = async (data: FormData) => {
     setLoading(true);
     try {
-      const response = await fetch("/api/send-email2", { 
-        method: "POST",
+      const response = await fetch('/send-emails.php', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify(data),
+        body: new URLSearchParams(data).toString(),
       });
-  
-      const result = await response.json();
-      console.log("Server response:", result); // Debugging
-      
-      if (result.success) {
-        reset();
-        onClose();
-        router.push("/thank-you");
+
+      if (response.ok) {
+        // Email sent successfully
+        console.log('Email sent successfully');
+        reset(); // Clear the form
+        setTimeout(() => {
+          router.push("/thank-you")
+        }, 1500)
+        // Optionally display a success message to the user
       } else {
-        console.error("Form Submission Failed:", result);
-        alert(`Error: ${result.message}`); // Show error to user
+        // Error sending email
+        console.error('Error sending email:', response.statusText);
+        // Optionally display an error message to the user
       }
     } catch (error) {
-      console.error("An error occurred:", error);
-      alert("Something went wrong. Please try again.");
+      console.error('Error sending email:', error);
+      // Optionally display an error message to the user
     } finally {
       setLoading(false);
     }
   };
-  
 
   if (!isOpen) return null;
 

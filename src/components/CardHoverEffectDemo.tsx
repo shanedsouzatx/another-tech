@@ -9,7 +9,7 @@ export function CardHoverEffectDemo() {
 }
 export const projects = [
   {
-    title: "Webistes",
+    title: "Websites",
     count: 500,
   },
   {

@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import Image from "next/image";
 import { mobileApps } from "@/data/porfolios";
-import { Testimonials } from "@/components/Testimonials";
+import Link from "next/link";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { FaRegCheckCircle } from "react-icons/fa";
 import BannerSlider from "@/components/BannerSlider";
 import { heroBgImgSrc } from "@/constants/CloudinaryImgUrl";
@@ -15,11 +16,15 @@ import GradientButton from "@/components/GradientButton";
 import OutlineButton from "@/components/OulineButton";
 import BusinessSection from "@/components/BusinessSection";
 import LeadForm from "@/components/LeadForm";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const MobileApplication = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section className="w-full">
       {/* Hero Section */}
       <div
@@ -88,17 +93,17 @@ const MobileApplication = () => {
                 </div>
               </div>
               {/* ORM ICONS */}
-              <div className="flex items-center gap-4 mt-2 z-50">
-                <a href="#">
+              <div className="flex items-center gap-4 mt-5 z-50">
+                <Link href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
                     className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
@@ -106,8 +111,8 @@ const MobileApplication = () => {
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                {/* <Link href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
@@ -115,7 +120,7 @@ const MobileApplication = () => {
                     width={130}
                     height={130}
                   />
-                </a>
+                </Link> */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -143,7 +148,7 @@ const MobileApplication = () => {
       <div className="w-full py-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-wrap md:flex-nowrap">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <div className="w-full sm:w-1/2 mb-8 md:mb-0">
               {/* <h5 className="text-2xl text-[#5114AE] font-semibold mb-3">
                 App Development Services
               </h5> */}
@@ -183,7 +188,7 @@ const MobileApplication = () => {
                 <OutlineButton text="Chat With Us" />
               </div>
             </div>
-            <div className="w-full md:w-1/2 md:pl-8">
+            <div className="w-full sm:w-1/2 md:pl-8">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724975491/m4-01-1024x1024_prvw2n.webp"
                 alt="design1"
@@ -216,7 +221,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 2*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724975905/m3-01-1024x1024_wygotd.webp"
                 alt="design2"
@@ -225,8 +230,8 @@ const MobileApplication = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
-              <h2 className="text-4xl text-slate-800 font-bold mb-4">
+            <div className="w-full sm:w-1/2">
+              <h2 className="text-4xl w-full text-center sm:text-left text-slate-800 font-bold mb-4">
                 Optimized Performance, Remarkable User Experience With Native
                 Apps
               </h2>
@@ -261,7 +266,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 3*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full px-7">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Get The Best of Both Worlds With Hybrid Apps
               </h2>
@@ -291,7 +296,7 @@ const MobileApplication = () => {
                 streamline operations, or enter new markets.
               </p>
             </div>
-            <div className="w-1/2">
+            {/* <div className="w-full sm:w-1/2">
               <Image
                 src="https://techcraftinc.com/wp-content/uploads/2024/04/ma2-01-1024x1024.webp"
                 alt="design2"
@@ -300,14 +305,14 @@ const MobileApplication = () => {
                 objectFit="contain"
                 className="ml-auto"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
         {/* TEXT IMAGE SECTION 4*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724976852/ma1-01-1024x1024_kskxhc.webp"
                 alt="design2"
@@ -316,7 +321,7 @@ const MobileApplication = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold mb-4">
                 Integrated Solutions With Cross-Platform App Development
               </h2>
@@ -362,7 +367,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 5*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Build Your Brand
               </h2>
@@ -381,7 +386,7 @@ const MobileApplication = () => {
                 experience which rise your brand equity.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720812024/app-5_agclx0.jpg"
                 alt="design2"
@@ -397,7 +402,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 6*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720812059/app-6_gz1otw.jpg"
                 alt="design2"
@@ -406,7 +411,7 @@ const MobileApplication = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Build Customer Relationships
               </h2>
@@ -436,7 +441,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 7*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Customers Have 24/7 Access
                 <br />
@@ -456,7 +461,7 @@ const MobileApplication = () => {
                 use repeatedly.
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720812207/app-7_ejgy6q.webp"
                 alt="design2"
@@ -472,7 +477,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 8*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720812282/app-8_f4issd.jpg"
                 alt="design2"
@@ -481,7 +486,7 @@ const MobileApplication = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Provide Excellent Customer Insights
               </h2>
@@ -499,7 +504,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 9*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720812427/app-9_kb8347.jpg"
                 alt="design2"
@@ -509,7 +514,7 @@ const MobileApplication = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Powerful Marketing Tools
               </h2>
@@ -528,7 +533,7 @@ const MobileApplication = () => {
         {/* TEXT IMAGE SECTION 10*/}
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720812433/app-10_dj0fuq.webp"
                 alt="design2"
@@ -537,7 +542,7 @@ const MobileApplication = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Cost-Effective
               </h2>
@@ -568,9 +573,9 @@ const MobileApplication = () => {
       <div className="py-16 -z-50 bg-[#F9F9F9]">
         {/* Portfolio heading */}
         <div className="max-w-6xl mx-auto" data-aos="zoom-in">
-          <h5 className="text-center text-2xl text-[#5114AE] font-semibold">
+          <h2 className="text-center text-2xl text-[#5114AE] font-semibold">
             Showcase of Success
-          </h5>
+          </h2>
           <p className="text-center text-base text-[#687087] mt-4">
             Why rely solely on what we say? Explore our successful portfolio and
             see the excellence for yourself.
@@ -581,7 +586,7 @@ const MobileApplication = () => {
         </div>
 
         {/* <ScrollContainer /> */}
-        <div className="max-w-[1400px] mx-auto flex flex-wrap my-16 justify-between">
+        <div className="max-w-[1400px] mx-auto px-[30px] sm:px-0 flex flex-wrap my-16 justify-between">
           {mobileApps.map((imgSrc, i) => (
             <ThreeDCardDemo key={i} imgSrc={imgSrc} />
           ))}
@@ -599,21 +604,23 @@ const MobileApplication = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

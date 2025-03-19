@@ -1,14 +1,19 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React from "react";
-import { Testimonials } from "@/components/Testimonials";
+
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { pricesHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
 import PricingSection from "@/components/PricingSection";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 function Prices() {
   return (
+    <>
+    <Navbar/>
     <section className="w-full">
       {/* Hero Section */}
       <HeroSection
@@ -27,19 +32,21 @@ function Prices() {
       {/* Testimonials section */}
       <div className="my-10 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6" data-aos="zoom-in">
+        {/* <div className="mb-6" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
       {/* Projects Count */}
       <CountSection />
+      <Footer/>
     </section>
+    </>
   );
 }
 

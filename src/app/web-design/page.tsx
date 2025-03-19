@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Testimonials } from "@/components/Testimonials";
+
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { eCommerce } from "@/data/porfolios";
 import BannerSlider from "@/components/BannerSlider";
@@ -15,27 +16,31 @@ import OutlineButton from "@/components/OulineButton";
 import Modal from "@/components/Modal/Modal";
 import CountSection from "@/components/CountSection";
 import AllInOneCombo from "@/components/AllInOneCombo";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const WebDesign = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
-        className="pt-40 pb-28 bg-no-repeat bg-cover md:pt-48 md:pb-32"
+        className="pt-24 pb-16 md:pt-28 md:pb-28 bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${heroBgImgSrc})`,
         }}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between h-full">
+        <div className="max-w-6xl pt-16 mx-auto flex flex-col md:flex-row items-center justify-between h-full px-4 md:px-0">
           {/* Content */}
-          <div className="w-1/2 h-full flex items-center ">
+          <div className="w-full md:w-1/2 h-full flex items-center">
             <div className="w-full">
-              <h2 className="text-[#5114AE] font-semibold text-xl md:text-2xl z-50">
+              <h2 className="text-[#5114AE] font-semibold text-lg md:text-2xl z-50">
                 Website Design
               </h2>
-              <h1 className="text-2xl md:text-4xl font-semibold dark:text-white flex flex-col space-y-4 z-50 my-3">
+              <h1 className="text-xl md:text-4xl font-semibold dark:text-white flex flex-col space-y-2 md:space-y-4 z-50 my-2 md:my-3">
                 Engaging Website Designs
                 <br />
                 That Capture And Convert
@@ -49,33 +54,34 @@ const WebDesign = () => {
               </p>
 
               <div className="my-4">
-                <div className="flex items-center space-x-4 mb-1">
-                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-96">
+                <div className="flex flex-col md:flex-row items-start md:items-center md:space-x-4 space-y-2 md:space-y-0 mb-2 md:mb-1">
+                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-full md:w-96">
                     <FaRegCheckCircle size={15} color="#802FCE" />
                     <span>Designs That Convert</span>
                   </div>
-                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-96">
+                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-full md:w-96">
                     <FaRegCheckCircle size={15} color="#802FCE" />
                     <span>Intuitive, Accessible Layouts</span>
                   </div>
                 </div>
-                <div className="flex items-center space-x-4">
-                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-96">
+                <div className="flex flex-col md:flex-row items-start md:items-center md:space-x-4 space-y-2 md:space-y-0">
+                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-full md:w-96">
                     <FaRegCheckCircle size={15} color="#802FCE" />
                     <span>Seamless, Cross-Device Functionality</span>
                   </div>
-                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-96">
+                  <div className="flex items-center gap-2 rounded-lg text-slate-600 w-full md:w-96">
                     <FaRegCheckCircle size={15} color="#802FCE" />
                     <span>Fast-Loading, Optimized Code & Images</span>
                   </div>
                 </div>
               </div>
               {/* ORM ICONS */}
-              <div className="flex items-center gap-4 mt-2 z-50">
-                <a href="#">
+              <div className="flex items-center gap-4 mt-5 z-50">
+                <a href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
@@ -84,18 +90,20 @@ const WebDesign = () => {
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
                 </a>
-                <a href="#" className="mt-4">
+                {/* <a href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
+                </a> */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -111,13 +119,13 @@ const WebDesign = () => {
             </div>
           </div>
           {/* Image */}
-          <div className="w-1/2 h-full flex items-center justify-end">
+          <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end mt-6 md:mt-0">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725056828/What-is-the-best-SEO-strategy-for-2020__1_-removebg-preview-1_js9ne8.webp"
               alt="web-design-heroimg"
-              width={500} // Adjust the width as needed
-              height={500} // Adjust the height as needed
-              className="object-contain"
+              width={500}
+              height={500}
+              className="object-contain w-full max-w-[300px] md:max-w-[500px]"
             />
           </div>
         </div>
@@ -128,23 +136,23 @@ const WebDesign = () => {
 
       {/* TEXT IMAGE SECTION 1*/}
       <div className="w-full">
-        <div className="w-full my-16">
-          <div className="max-w-6xl mx-auto flex flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+        <div className="w-full my-8 md:my-16">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row-reverse flex-wrap px-4 md:px-0">
+            <div className="w-full md:w-1/2 flex justify-center md:justify-end">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725057586/w2_ga2ozd.webp"
                 alt="web-design1"
                 width={500}
                 height={500}
                 objectFit="contain"
-                className="ml-auto"
+                className="w-full max-w-[300px] md:max-w-[500px]"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full md:w-1/2 mt-6 md:mt-0">
               {/* <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 E-Commerce Marketing
               </h5> */}
-              <h2 className="text-4xl text-slate-800 font-bold">
+              <h2 className="text-2xl md:text-4xl text-slate-800 font-bold">
                 WordPress Websites For
                 <br />
                 Tailored Digital Platforms
@@ -153,13 +161,13 @@ const WebDesign = () => {
                 WordPress offers an exceptional platform for crafting websites
                 that cater to a wide range of needs. Our team leverages this
                 versatile CMS to develop sites that effectively communicate your
-                brand’s message and engage your audience. We specialize in
+                brand's message and engage your audience. We specialize in
                 creating custom, scalable solutions — from compelling
                 content-centric blogs to feature-rich e-commerce sites. We
                 prioritize delivering a smooth user experience, incorporating
                 advanced plugins, and designing themes that reflect your unique
                 brand identity. Recognizing that your website is a crucial
-                component of your business’s online strategy, we build with an
+                component of your business's online strategy, we build with an
                 eye for detail, ensuring functionality, aesthetics, and
                 performance align perfectly with your goals. Partner with us to
                 craft a WordPress site that is a powerful tool in your digital
@@ -179,19 +187,20 @@ const WebDesign = () => {
 
       {/* TEXT IMAGE SECTION 2*/}
       <div className="w-full">
-        <div className="w-full my-16">
-          <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+        <div className="w-full my-8 md:my-16">
+          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center flex-wrap px-4 md:px-0">
+            <div className="w-full md:w-1/2 flex justify-center">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725057709/pngwing.com-6-1024x757_fnwhvi.png"
                 alt="web-design2"
                 width={500}
                 height={500}
                 objectFit="contain"
+                className="w-full max-w-[300px] md:max-w-[500px]"
               />
             </div>
-            <div className="w-1/2">
-              <h2 className="text-4xl text-slate-800 font-bold">
+            <div className="w-full md:w-1/2 mt-6 md:mt-0">
+              <h2 className="text-2xl md:text-4xl text-slate-800 font-bold">
                 Get Shopify Excellence
                 <br />
                 With Streamlined E-
@@ -204,7 +213,7 @@ const WebDesign = () => {
                 Our expertise in Shopify website development enables us to
                 create online stores that draw in visitors and inspire
                 confidence and loyalty. By prioritizing a hassle-free shopping
-                experience, we utilize Shopify’s customization capabilities to
+                experience, we utilize Shopify's customization capabilities to
                 design stores that differentiate your brand.We ensure that every
                 element of your Shopify store, from product presentation and
                 checkout process to inventory management and customer service,
@@ -219,14 +228,14 @@ const WebDesign = () => {
       </div>
 
       {/* TEXT IMAGE SECTION 3*/}
-      <div className="w-full my-16">
-        <div className="max-w-6xl mx-auto flex flex-wrap">
-          <div className="w-1/2">
-            <h2 className="text-4xl text-slate-800 font-bold">
+      <div className="w-full my-8 md:my-16">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row flex-wrap px-4 md:px-0">
+          <div className="w-full md:w-1/2">
+            <h2 className="text-3xl md:text-4xl text-slate-800 font-bold">
               Crafting Responsive Websites for All Devices
             </h2>
             <p className="text-gray-500 text-base my-4">
-              A responsive website is not just an option; it’s a necessity in
+              A responsive website is not just an option; it's a necessity in
               the digital business world. Our responsive web design services
               ensure your site looks and functions flawlessly on every device,
               from desktops to smartphones. We prioritize flexibility,
@@ -243,14 +252,14 @@ const WebDesign = () => {
               experience for everyone.
             </p>
           </div>
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2 flex justify-center md:justify-end mt-6 md:mt-0">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725057993/pngwing.com-4_iuvw7g.png"
               alt="webdesign3"
               width={500}
               height={500}
               objectFit="contain"
-              className="ml-auto"
+              className="w-full max-w-[300px] md:max-w-[500px]"
             />
           </div>
         </div>
@@ -260,15 +269,15 @@ const WebDesign = () => {
       <BusinessSection
         subHeading="Custom Web Design and Marketing Solutions for Business Growth"
         isPhoneIcon={true}
-        para="Boost your business with a customized website and digital marketing strategy! At Tech Craft, we’re home to seasoned designers, developers, and digital marketing experts who are focused on delivering results with excellence. Ready to reinforce your online presence and drive more traffic to your website? Let’s discuss. We are just a text away."
+        para="Boost your business with a customized website and digital marketing strategy! At Tech Craft, we're home to seasoned designers, developers, and digital marketing experts who are focused on delivering results with excellence. Ready to reinforce your online presence and drive more traffic to your website? Let's discuss. We are just a text away."
         btnText="(667) 423-5532"
       />
 
       {/* Portfolio Section*/}
-      <div className="py-16 -z-50 bg-[#F9F9F9]">
+      <div className="py-12 md:py-20 -z-50 bg-[#F9F9F9] px-4 md:px-0">
         {/* Portfolio heading */}
         <div className="max-w-6xl mx-auto" data-aos="zoom-in">
-          <h5 className="text-center text-2xl text-[#5114AE] font-extrabold mb-2">
+          <h5 className="text-center text-xl md:text-2xl text-[#5114AE] font-extrabold mb-2">
             Our Portfolio
           </h5>
 
@@ -281,7 +290,7 @@ const WebDesign = () => {
         </div>
 
         {/* <ScrollContainer /> */}
-        <div className="max-w-[1400px] mx-auto flex flex-wrap my-16 justify-between">
+        <div className="max-w-[1400px] mx-auto flex flex-wrap my-16 justify-center md:justify-between gap-6">
           {eCommerce.map((imgSrc, i) => (
             <ThreeDCardDemo key={i} imgSrc={imgSrc} />
           ))}
@@ -303,22 +312,24 @@ const WebDesign = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
 
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

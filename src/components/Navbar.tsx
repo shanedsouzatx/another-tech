@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { Menu, MenuItem } from "@/components/ui/navbar-menu";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
@@ -19,7 +19,29 @@ const Navbar = ({ className }: { className?: string }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState<boolean>(false);
   const submenuRef = useRef<HTMLDivElement>(null);
+  const sidebarRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
+
+  // Add click outside handler
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        sidebarRef.current && 
+        !sidebarRef.current.contains(event.target as Node) &&
+        !(event.target as Element).closest('button')
+      ) {
+        setSidebarOpen(false);
+      }
+    };
+
+    if (sidebarOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [sidebarOpen]);
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -27,9 +49,9 @@ const Navbar = ({ className }: { className?: string }) => {
     <>
       <div
         className={cn(
-          "flex items-center justify-between fixed top-7 md:top-10 inset-x-0 max-w-6xl mx-auto z-50 shadow-2xl rounded-full py-3 px-6 bg-white",
+          "flex items-center justify-between fixed top-7 md:top-10 left-0 right-0 mx-auto z-50 shadow-2xl rounded-full py-3 px-4 md:px-6 bg-white w-[95%] md:w-auto md:max-w-6xl",
           className
-        )}
+        )}  
         data-aos="fade-down"
       >
         <Link
@@ -269,9 +291,9 @@ const Navbar = ({ className }: { className?: string }) => {
           </div>
           <div className="flex items-center space-x-2 text-[#5114AE]">
             <FaPhoneAlt size={17} />
-            <a href="tel:+18583650790" className="font-semibold">
+            <Link href="tel:+18583650790" className="font-semibold">
               (667) 423-5532
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -289,12 +311,11 @@ const Navbar = ({ className }: { className?: string }) => {
 
       {/* Sidebar */}
       {sidebarOpen && (
-        <div
-          className={`fixed inset-y-0 left-0 bg-black bg-opacity-50 z-50 transform ${
-            sidebarOpen ? "translate-x-0" : "-translate-x-full"
-          } transition-transform duration-300 ease-in-out w-3/4`}
-        >
-          <div className="bg-[#E9E9E9] h-full w-full border-r border-slate-300">
+        <div className="fixed inset-y-0 left-0 w-full bg-black bg-opacity-50 z-50">
+          <div 
+            ref={sidebarRef}
+            className="bg-[#E9E9E9] h-full w-3/4 max-w-[300px] border-r border-slate-300"
+          >
             <div className="flex flex-col">
               <div className="py-6 pl-4" onClick={() => router.push("/")}>
                 <Image
@@ -307,15 +328,15 @@ const Navbar = ({ className }: { className?: string }) => {
 
               <ul>
                 <li className="py-2 border-t border-gray-300 px-6 text-slate-600">
-                  <a href="/" className="text-sm">
+                  <Link href="/" className="text-sm">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2 border-t border-gray-300 text-slate-600">
                   <div className="flex justify-between items-center px-6">
-                    <a href="/services" className="text-sm">
+                    <Link href="/services" className="text-sm">
                       Services
-                    </a>
+                    </Link>
                     <button
                       onClick={() => setServicesOpen(!servicesOpen)}
                       aria-expanded={servicesOpen}
@@ -342,110 +363,110 @@ const Navbar = ({ className }: { className?: string }) => {
                   >
                     <ul className="mt-2 bg-white">
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/logo-design"
                           className="text-xs font-medium text-slate-600"
                         >
                           Logo Design
-                        </a>
+                        </Link>
                       </li>
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/web-design"
                           className="text-xs font-medium text-slate-600"
                         >
                           Web Design
-                        </a>
+                        </Link>
                       </li>
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/website-development"
                           className="text-xs font-medium text-slate-600"
                         >
                           Web Application Development
-                        </a>
+                        </Link>
                       </li>
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/wordpress-development"
                           className="text-xs font-medium text-slate-600"
                         >
                           WordPress Web Development
-                        </a>
+                        </Link>
                       </li>
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/mobile-application"
                           className="text-xs font-medium text-slate-600"
                         >
                           Mobile Application Development
-                        </a>
+                        </Link>
                       </li>
 
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/creative-copywriting"
                           className="text-xs font-medium text-slate-600"
                         >
                           Creative Copywriting
-                        </a>
+                        </Link>
                       </li>
 
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/digital-marketing"
                           className="text-xs font-medium text-slate-600"
                         >
                           Search Engine Optimization
-                        </a>
+                        </Link>
                       </li>
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/ecommerce-solutions"
                           className="text-xs font-medium text-slate-600"
                         >
                           Ecommerce Web Solutions
-                        </a>
+                        </Link>
                       </li>
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/video-animation"
                           className="text-xs font-medium text-slate-600"
                         >
                           Video Animation
-                        </a>
+                        </Link>
                       </li>
 
                       <li className="py-2 px-6 border-t border-gray-300">
-                        <a
+                        <Link
                           href="/branding"
                           className="text-xs font-medium text-slate-600"
                         >
                           Branding
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
                 </li>
                 <li className="py-2 border-t border-gray-300 px-6 text-slate-600">
-                  <a href="/portfolio" className="text-sm">
+                  <Link href="/portfolio" className="text-sm">
                     Portfolios
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2 border-t border-gray-300 px-6 text-slate-600">
-                  <a href="/pricing" className="text-sm">
+                  <Link href="/pricing" className="text-sm">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2 border-t border-gray-300 px-6 text-slate-600">
-                  <a href="/aboutus" className="text-sm">
+                  <Link href="/about-us" className="text-sm">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="py-2 border-t border-gray-300 px-6 text-slate-600">
-                  <a href="/contact-us" className="text-sm">
+                  <Link href="/contact-us" className="text-sm">
                     Contact Us
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

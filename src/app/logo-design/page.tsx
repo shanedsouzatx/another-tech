@@ -4,7 +4,8 @@ import { useState } from "react";
 import Image from "next/image";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { logoDesign } from "@/data/porfolios";
-import { Testimonials } from "@/components/Testimonials";
+import Link from "next/link";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import BannerSlider from "@/components/BannerSlider";
 import PricingSection from "@/components/PricingSection";
 import BusinessSection from "@/components/BusinessSection";
@@ -14,10 +15,13 @@ import OutlineButton from "@/components/OulineButton";
 import Modal from "@/components/Modal/Modal";
 import { heroBgImgSrc } from "@/constants/CloudinaryImgUrl";
 import { closeModal, openModal } from "@/app/utils/HelperFunction";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 const LogoDesign = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
+    <>
+    <Navbar/>
     <section className="w-full">
       {/* Logo Design Hero Section */}
       <div
@@ -63,7 +67,7 @@ const LogoDesign = () => {
             <div className="row">
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720480941/002_mltlgi.jpg"
@@ -77,7 +81,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720480978/005_ma60jz.jpg"
@@ -91,7 +95,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481122/009_ckrljp.jpg"
@@ -105,7 +109,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481186/004_eywbch.jpg"
@@ -119,7 +123,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481261/001_qkxtas.jpg"
@@ -133,7 +137,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481526/015_ubds5w.jpg"
@@ -147,7 +151,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481566/018_h8ahio.jpg"
@@ -161,7 +165,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481609/006_fu8jmh.jpg"
@@ -175,7 +179,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481645/011_fjp1rt.jpg"
@@ -189,7 +193,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481663/010_qxietf.jpg"
@@ -203,7 +207,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481714/017_q1ccc7.jpg"
@@ -217,7 +221,7 @@ const LogoDesign = () => {
               </div>
               <div className="column">
                 <div className="ItemCard">
-                  <a className="ItemCard__dest cover" href="javascript:;"></a>
+                  <Link className="ItemCard__dest cover" href="javascript:;"></Link>
                   <figure className="ItemCard__thumb">
                     <img
                       src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720481826/016_mza4wm.jpg"
@@ -626,7 +630,7 @@ const LogoDesign = () => {
         {/* TEXT IMAGE SECTION 9 */}
         <div className="w-full my-16 px-4 md:px-8">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center flex-wrap">
-            <div className="w-full md:w-1/2 mb-8 md:mb-0">
+            <div className="w-full text-center mb-8 md:mb-0">
               <h2 className="text-2xl md:text-4xl text-slate-800 font-bold mb-4 md:mb-6">
                 Enliven Your Brand with Mascots <br /> Logo Designs
               </h2>
@@ -656,7 +660,7 @@ const LogoDesign = () => {
                 with your brand into a memorable experience.
               </p>
             </div>
-            <div className="w-full md:w-1/2">
+            {/* <div className="w-full md:w-1/2">
               <Image
                 src="https://techcraftinc.com/wp-content/uploads/2024/03/logos.webp"
                 alt="design2"
@@ -665,7 +669,7 @@ const LogoDesign = () => {
                 objectFit="contain"
                 className="mx-auto md:ml-auto"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -769,20 +773,22 @@ const LogoDesign = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4/>
       </div>
       {/* Projects Count */}
       <CountSection />
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

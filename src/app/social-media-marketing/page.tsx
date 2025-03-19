@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Testimonials } from "@/components/Testimonials";
+import Link from "next/link";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import MiddleBannerSection from "@/components/MiddleBannerSection";
 import BannerSlider from "@/components/BannerSlider";
 import { heroBgImgSrc } from "@/constants/CloudinaryImgUrl";
@@ -16,23 +17,27 @@ import GradientButton from "@/components/GradientButton";
 import OutlineButton from "@/components/OulineButton";
 import { closeModal, openModal } from "../utils/HelperFunction";
 import Modal from "@/components/Modal/Modal";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const SocialMediaMarketing = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
-        className="pt-40 pb-28 bg-no-repeat bg-cover md:pt-48 md:pb-32"
+        className="pt-40  pb-28 bg-no-repeat bg-cover md:pt-48 md:pb-32"
         style={{
           backgroundImage: `url(${heroBgImgSrc})`,
         }}
       >
         <div className="max-w-6xl mx-auto flex items-center justify-between h-full">
           {/* Content */}
-          <div className="w-1/2 h-full flex items-center ">
-            <div className="w-full">
+          <div className="w-full sm:w-1/2 h-full flex items-center ">
+            <div className="w-full px-4">
               <h2 className="text-[#5114AE] font-semibold text-xl md:text-2xl z-50">
                 Social Media Marketing
               </h2>
@@ -74,33 +79,35 @@ const SocialMediaMarketing = () => {
                 </div>
               </div>
               {/* ORM ICONS */}
-              <div className="flex items-center gap-4 mt-2 z-50">
-                <a href="#">
+             <div className="flex items-center gap-4 mt-5 z-50">
+                <Link href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                {/* <Link href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
+                    className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
+                </Link> */}
               </div>
-
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
                 <GradientButton
                   text="Chat With Us"
@@ -114,7 +121,7 @@ const SocialMediaMarketing = () => {
             </div>
           </div>
           {/* Form */}
-          <div className="w-1/2 h-full flex items-center justify-end">
+          <div className="w-full sm:w-1/2 h-full flex items-center justify-end">
             <LeadForm />
           </div>
         </div>
@@ -124,9 +131,9 @@ const SocialMediaMarketing = () => {
 
       {/* TEXT IMAGE SECTION 1*/}
       <div className="w-full">
-        <div className="w-full mt-16">
+        <div className="w-full px-4 mt-16">
           <div className="max-w-6xl mx-auto flex flex-wrap items-center flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725040520/o3-01-1024x1024_mb7evv.webp"
                 alt="v-animation1"
@@ -136,7 +143,7 @@ const SocialMediaMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               {/* <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 Social Media Marketing
               </h5> */}
@@ -170,9 +177,9 @@ const SocialMediaMarketing = () => {
 
       {/* TEXT IMAGE SECTION 2*/}
       <div className="w-full">
-        <div className="w-full">
+        <div className="w-full px-4">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725040925/o1-01-1024x1024_vxerrf.webp"
                 alt="v-animation1"
@@ -181,7 +188,7 @@ const SocialMediaMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               {/* <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 How to Market on Social Media
               </h5> */}
@@ -205,9 +212,9 @@ const SocialMediaMarketing = () => {
 
       {/* TEXT IMAGE SECTION 3*/}
       <div className="w-full">
-        <div className="w-full">
+        <div className="w-full px-4">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725041073/o2-01-1024x1012_jmidyp.webp"
                 alt="v-animation1"
@@ -217,7 +224,7 @@ const SocialMediaMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               {/* <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 Services for Business Social Media Marketing
               </h5> */}
@@ -252,9 +259,9 @@ const SocialMediaMarketing = () => {
 
       {/* TEXT IMAGE SECTION 4*/}
       <div className="w-full">
-        <div className="w-full mt-16">
+        <div className="w-full px-4 mt-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725041200/happy-tiny-business-people-dancing-having-fun-drinking-wine-corporate-party-team-building-activity-corporate-event-idea-concept-pinkish-coral-bluevector-isolated-illustration_335657-1414-1_ripp5r.webp"
                 alt="v-animation1"
@@ -263,7 +270,7 @@ const SocialMediaMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Turn Scrollers into Followers
                 <br />
@@ -288,7 +295,7 @@ const SocialMediaMarketing = () => {
       <div className="w-full">
         <div className="w-full my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1725041472/digital-marketing-online-advertising-smm-app-notification-chatting-texting-viral-content-internet-meme-creation-mass-shared-content-concept-illustration_335657-2585_j2yy4k.webp"
                 alt="v-animation1"
@@ -298,7 +305,7 @@ const SocialMediaMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-4xl text-slate-800 font-bold">
                 Social Media
                 <br />
@@ -346,9 +353,9 @@ const SocialMediaMarketing = () => {
 
       {/* TEXT IMAGE SECTION 5*/}
       <div className="w-full">
-        <div className="w-full mt-28 mb-16">
+        <div className="w-full px-4   mt-28 mb-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720823762/media-4_kj8092.jpg"
                 alt="v-animation1"
@@ -357,7 +364,7 @@ const SocialMediaMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 Social Media Marketing Platforms
               </h5>
@@ -407,22 +414,24 @@ const SocialMediaMarketing = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4 />
       </div>
 
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

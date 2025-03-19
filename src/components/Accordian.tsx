@@ -1,17 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Accordion = () => {
-  const [expandedPanel, setExpandedPanel] = useState<string | null>(
-    "accordion-panel-1"
-  );
+  const [expandedPanel, setExpandedPanel] = useState<string | null>(null);
 
   const togglePanel = (panelId: string) => {
-    if (expandedPanel === panelId) {
-      setExpandedPanel(null);
-    } else {
-      setExpandedPanel(panelId);
-    }
+    setExpandedPanel((prevId) => (prevId === panelId ? null : panelId));
   };
 
   return (
@@ -22,16 +17,16 @@ const Accordion = () => {
           Give Your Business A Digital Boost.
         </h2>
         <p className="text-left text-sm md:text-base text-[#687087]">
-          The digital marketing competition is very high. Without a professional
-          digital marketing agency, it would be very complicated for you to
-          survive and grow your business. A website alone doesn’t guarantee
-          visibility unless search engines recognize it. Tech Craft specializes
-          in amplifying the digital presence of any business through targeted
-          website design, compelling copywriting, strategic keyword integration,
-          and active social media engagement to ensure your site is easily
-          discoverable by the intended audience. We guarantee that partnering
-          with Tech Craft will optimize your marketing investment for the
-          highest returns.
+          The digital marketing competition is very high. Without a
+          professional digital marketing agency, it would be very complicated
+          for you to survive and grow your business. A website alone doesn’t
+          guarantee visibility unless search engines recognize it. Tech Craft
+          specializes in amplifying the digital presence of any business
+          through targeted website design, compelling copywriting, strategic
+          keyword integration, and active social media engagement to ensure your
+          site is easily discoverable by the intended audience. We guarantee
+          that partnering with Tech Craft will optimize your marketing
+          investment for the highest returns.
         </p>
       </div>
 
@@ -65,19 +60,29 @@ const Accordion = () => {
             content: `There’s no point in sticking with strategies that don’t deliver. Tech Craft listens to your needs and objectives, crafting and executing plans that align with your business’s goals. Our focus is clear: to strengthen your brand’s visibility, recognition, growth, and development. We utilize SEO and other innovative digital tools and techniques approved by Google’s algorithms to ensure your business gets higher search results and intended audience that can easily convert into sales.`,
           },
         ].map((panel) => (
-          <div key={panel.id} className="mb-4">
+          <motion.div
+            key={panel.id}
+            className="mb-4 overflow-hidden rounded-xl"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{
+              opacity: 1,
+              height: "auto",
+              transition: { duration: 0.4, ease: "easeInOut" }, 
+            }}
+          >
             <h2>
-              <button
+              <motion.button
                 type="button"
                 onClick={() => togglePanel(panel.id)}
-                className="flex items-center w-full p-5 font-medium text-white bg-[#33174E] border border-b-0 border-white rounded-t-xl focus:ring-4 focus:ring-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-[#33174E] dark:hover:bg-gray-800 gap-3"
+                className="flex items-center w-full p-5 font-medium text-white bg-gradient-to-r from-[#282353]  to-[#282353]/80   border-b-0 rounded-t-xl focus:ring-4 focus:ring-white dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 gap-3 hover:shadow-lg transform hover:scale-80 transition duration-300 ease-in-out"
                 aria-expanded={expandedPanel === panel.id}
                 aria-controls={`accordion-content-${panel.id}`}
+                whileHover={{ scale: 0.99 }} // Smooth scale on hover
               >
                 {panel.title}
                 <svg
-                  className={`w-3 h-3 rotate-180 shrink-0 ml-auto ${
-                    expandedPanel === panel.id ? "" : "rotate-0"
+                  className={`w-3 h-3 shrink-0 ml-auto transition-transform duration-300 ${
+                    expandedPanel === panel.id ? "rotate-180" : "rotate-0"
                   }`}
                   aria-hidden="true"
                   xmlns="http://www.w3.org/2000/svg"
@@ -92,21 +97,30 @@ const Accordion = () => {
                     d="M9 5 5 1 1 5"
                   />
                 </svg>
-              </button>
+              </motion.button>
             </h2>
-            <div
-              id={`accordion-content-${panel.id}`}
-              className={`shadow-lg bg-white p-4 ${
-                expandedPanel === panel.id ? "block" : "hidden"
-              }`}
-              aria-labelledby={`accordion-button-${panel.id}`}
-            >
-              <p
-                className="text-sm md:text-base text-[#687087] my-4"
-                dangerouslySetInnerHTML={{ __html: panel.content }}
-              />
-            </div>
-          </div>
+            <AnimatePresence>
+              {expandedPanel === panel.id && (
+                <motion.div
+                  id={`accordion-content-${panel.id}`}
+                  className="shadow-lg bg-white p-4"
+                  aria-labelledby={`accordion-button-${panel.id}`}
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{
+                    opacity: 1,
+                    height: "auto",
+                    transition: { duration: 0.4, ease: "easeInOut" }, 
+                  }}
+                  exit={{ opacity: 0, height: 0, transition: { duration: 0.3 } }}
+                >
+                  <p
+                    className="text-sm md:text-base text-[#687087] my-4"
+                    dangerouslySetInnerHTML={{ __html: panel.content }}
+                  />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </motion.div>
         ))}
       </div>
     </div>
@@ -114,3 +128,4 @@ const Accordion = () => {
 };
 
 export default Accordion;
+

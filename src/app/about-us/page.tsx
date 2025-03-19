@@ -13,10 +13,15 @@ import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
 import { OurServiceCard } from "@/components/OurServiceCard";
 import { aboutServices } from "@/data/services";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 function AboutUs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <HeroSection
@@ -139,7 +144,7 @@ function AboutUs() {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6" data-aos="zoom-in">
+        {/* <div className="mb-6" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
@@ -147,13 +152,16 @@ function AboutUs() {
             Testimonials
           </h4>
         </div>
-        <Testimonials />
+        <Testimonials /> */}
+    <Testimonials4/>
       </div>
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 }
 

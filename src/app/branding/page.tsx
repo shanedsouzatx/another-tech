@@ -3,7 +3,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { FaRegCheckCircle } from "react-icons/fa";
-import { Testimonials } from "@/components/Testimonials";
+
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import { branding } from "@/data/porfolios";
 import BannerSlider from "@/components/BannerSlider";
@@ -17,11 +18,16 @@ import { heroBgImgSrc, talkBg } from "@/constants/CloudinaryImgUrl";
 import LeadForm from "@/components/LeadForm";
 import { OurServiceCard } from "@/components/OurServiceCard";
 import { brandingServices } from "@/data/services";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Link from "next/link";
 
 const Branding = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
@@ -85,16 +91,16 @@ const Branding = () => {
               </div>
               {/* ORM ICONS */}
               <div className="flex items-center gap-4 mt-5 z-50">
-                <a href="#">
+                <Link href="https://www.trustpilot.com/review/techcraftinc.com">
                   <Image
-                    src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
+                    src={'/assets/images/trust.png'}
                     alt="trustpilot"
                     className="w-24 h-auto md:w-[130px] md:h-auto"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
@@ -102,8 +108,8 @@ const Branding = () => {
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                {/* <Link href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
@@ -111,7 +117,7 @@ const Branding = () => {
                     width={130}
                     height={130}
                   />
-                </a>
+                </a> */}
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -270,7 +276,7 @@ const Branding = () => {
       <div className="my-0 md:my-16 px-4">
         <div className="max-w-6xl mx-auto">
           {/* Card Section */}
-          <div className="flex flex-wrap md:justify-between">
+          <div className="flex pl-5 flex-wrap md:justify-between">
             {/* Card Section */}
             {brandingServices.map((el, idx) => (
               <OurServiceCard {...el} key={idx} />
@@ -397,9 +403,9 @@ const Branding = () => {
       <div className="py-16 -z-50 bg-[#F9F9F9]">
         {/* Portfolio heading */}
         <div className="max-w-6xl mx-auto" data-aos="zoom-in">
-          <h5 className="text-center text-2xl text-[#5114AE] font-semibold">
+          <h2 className="text-center text-2xl text-[#5114AE] font-semibold">
             Showcase of Success
-          </h5>
+          </h2>
           <p className="px-2 text-center text-sm md:text-base text-[#687087] mt-3 md:px-0 md:max-w-6xl md:mx-auto">
             Why rely solely on what we say? Explore our successful portfolio and
             see the excellence for yourself.
@@ -463,12 +469,12 @@ const Branding = () => {
                 <OutlineButton text="Chat With Us" />
               </div>
               <div className="flex justify-center">
-                <a
+                <Link
                   href="tel:(667) 423-5532"
                   className="text-2xl md:text-3xl text-[#5114AE] font-normal"
                 >
                   (667) 423-5532
-                </a>
+                </Link>
               </div>
             </div>
             {/* Phone Image */}
@@ -488,22 +494,24 @@ const Branding = () => {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
+        {/* <div className="mb-6 mt-16" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
           <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4/>
       </div>
 
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

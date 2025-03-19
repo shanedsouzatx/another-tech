@@ -18,7 +18,7 @@ export const HoverEffect = ({
   return (
     <div
       className={cn(
-        "grid grid-cols-1 px-11 sm:px-0 md:grid-cols-2 lg:gap-9 lg:grid-cols-4 max-w-7xl mx-auto",
+        "grid grid-cols-1 px-[55px] sm:px-0 md:grid-cols-2 lg:gap-9 lg:grid-cols-4 max-w-7xl mx-auto",
         className
       )}
     > 
@@ -88,14 +88,14 @@ export const CardTitle = ({
   children: React.ReactNode;
 }) => {
   return (
-    <h4
+    <h2
       className={cn(
         "font-semibold text-center text-slate-700 text-xl md:text-2xl md:text-left",
         className
       )}
     >
       {children}
-    </h4>
+    </h2>
   );
 };
 export const CardDescription = ({

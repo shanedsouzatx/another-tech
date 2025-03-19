@@ -2,7 +2,8 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Testimonials } from "@/components/Testimonials";
+import Link from "next/link";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { FaRegCheckCircle } from "react-icons/fa";
 import MiddleBannerSection from "@/components/MiddleBannerSection";
 import BannerSlider from "@/components/BannerSlider";
@@ -12,26 +13,30 @@ import CountSection from "@/components/CountSection";
 import GradientButton from "@/components/GradientButton";
 import { closeModal, openModal } from "../utils/HelperFunction";
 import Modal from "@/components/Modal/Modal";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const DigitalMarketing = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
+    <>
+    <Navbar/>
     <section className="w-full">
       {/* Hero Section */}
       <div
-        className="pt-40 pb-28 bg-no-repeat bg-cover md:pt-48 md:pb-32"
+        className="pt-24 pb-16 md:pt-40 md:pb-28 bg-no-repeat bg-cover"
         style={{
           backgroundImage: `url(${heroBgImgSrc})`,
         }}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between h-full">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between h-full px-4 md:px-0">
           {/* Content */}
-          <div className="w-1/2 h-full flex items-center ">
-            <div className="w-full">
-              <h2 className="text-[#5114AE] font-semibold text-xl md:text-2xl z-50">
+          <div className="w-full md:w-1/2 h-full flex items-center">
+            <div className="w-full text-center md:text-left">
+              <h2 className="text-[#5114AE] font-semibold text-lg md:text-xl">
                 Digital Marketing
               </h2>
-              <h1 className="text-2xl md:text-4xl font-semibold dark:text-white flex flex-col space-y-4 z-50 my-3">
+              <h1 className="text-2xl md:text-4xl font-semibold dark:text-white flex flex-col space-y-2 md:space-y-4 z-50 my-3">
                 Applying digital
                 <br />
                 marketing solutions to
@@ -69,30 +74,30 @@ const DigitalMarketing = () => {
               </div>
               {/* ORM ICONS */}
               <div className="flex items-center gap-4 mt-2 z-50">
-                <a href="#">
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720046788/trust-b_qphqsf.png"
                     alt="trustpilot"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#">
+                </Link>
+                <Link href="#">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
                     alt="google"
                     width={130}
                     height={130}
                   />
-                </a>
-                <a href="#" className="mt-4">
+                </Link>
+                <Link href="#" className="mt-4">
                   <Image
                     src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
                     alt="bingads"
                     width={130}
                     height={130}
                   />
-                </a>
+                </Link>
               </div>
 
               <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
@@ -104,15 +109,16 @@ const DigitalMarketing = () => {
             </div>
           </div>
           {/* Form */}
-          <div className="w-1/2 h-full flex items-center justify-end relative">
+          <div className="w-full md:w-1/2 h-full flex items-center justify-center md:justify-end relative mt-8 md:mt-0">
             <Image
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720813825/digital-laptop-base_zid2po.png"
               alt="marketing-bg"
               width={550}
               height={550}
+              className="w-full max-w-[300px] md:max-w-[550px]"
             />
             <Image
-              className="absolute top-4 right-20"
+              className="absolute top-4 right-4 md:right-20 w-full max-w-[200px] md:max-w-[400px]"
               src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720814032/digital-vector_lsdft3.png"
               alt="marketing-bg"
               width={400}
@@ -124,20 +130,17 @@ const DigitalMarketing = () => {
 
       {/* Slider */}
       <BannerSlider />
-      {/* TEXT IMAGE SECTION 1*/}
-      <div className="w-full">
-        <div className="w-full my-16">
-          <div className="max-w-6xl mx-auto flex flex-wrap">
-            <div className="w-1/2">
-              <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
-                Digital Marketing
-              </h5>
-              <h2 className="text-4xl text-slate-800 font-bold">
-                Let’s Make an Effective Goal
-                <br />
-                Plan with Targeted Strategies
-              </h2>
-              <p className="text-gray-500 text-base my-4">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row px-4 md:px-0 items-center">
+  <div className="w-full md:w-1/2 order-2 md:order-1">
+    <h5 className="text-xl md:text-2xl text-[#5114AE] font-semibold z-50 mb-3">
+      Digital Marketing
+    </h5>
+    <h2 className="text-2xl md:text-4xl text-slate-800 font-bold mb-4">
+      Let's Make an Effective Goal
+      <br className="hidden md:block" />
+      Plan with Targeted Strategies
+    </h2>
+    <p className="text-gray-500 text-base my-4">
                 To bring in new clients, TechCraft Internet Marketing Agency is
                 here which provide creative, adaptable and full digital
                 marketing services. However, TechCraft relies on its own
@@ -178,25 +181,23 @@ const DigitalMarketing = () => {
                   promises.
                 </span>
               </p>
-            </div>
-            <div className="w-1/2">
-              <Image
-                src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720814767/markiting-1_xjh7yv.jpg"
-                alt="design1"
-                width={530}
-                height={530}
-                objectFit="contain"
-                className="ml-auto"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
+  </div>
+  <div className="w-full md:w-1/2 order-1 md:order-2 mb-6 md:mb-0 flex justify-center md:justify-end">
+    <Image
+      src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720814767/markiting-1_xjh7yv.jpg"
+      alt="design1"
+      width={530}
+      height={530}
+      className="w-full max-w-[530px] h-auto"
+    />
+  </div>
+</div>
+
       {/* TEXT IMAGE SECTION 2*/}
       <div className="w-full">
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 Digital Marketing Services for Maximum Growth
               </h5>
@@ -223,7 +224,7 @@ const DigitalMarketing = () => {
                 </span>
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full hidden sm:flex sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720814811/markiting-2_yxvynd.jpg"
                 alt="design1"
@@ -238,9 +239,9 @@ const DigitalMarketing = () => {
 
       {/* TEXT IMAGE SECTION 3*/}
       <div className="w-full">
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h5 className="text-2xl text-[#5114AE] font-semibold z-50 mb-3">
                 Using Digital Marketing Services to Grow Your Business
               </h5>
@@ -275,7 +276,7 @@ const DigitalMarketing = () => {
                 </span>
               </p>
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720815036/markiting-3_j5udy0.jpg"
                 alt="design1"
@@ -290,54 +291,52 @@ const DigitalMarketing = () => {
       </div>
 
       {/*DIFFERENT LOGO TYPES SECTION */}
-      <section className="w-full">
+      <section className="w-full px-4 md:px-0">
         <div className="max-w-6xl mx-auto">
-          <h3 className="text-3xl text-center text-[#5114AE] font-bold z-50">
-            TechCraft’s Digital Marketing Services
+          <h3 className="text-2xl md:text-3xl text-center text-[#5114AE] font-bold mb-4">
+            TechCraft's Digital Marketing Services
           </h3>
-          <h4 className="text-gray-500 text-center text-base my-3 font-medium">
+          <p className="text-gray-500 text-center text-sm md:text-base mb-8">
             Check out the many different digital marketing services that
             TechCraft provides in the list below.
-          </h4>
-          <p className="text-gray-500 text-center text-sm">
-            To find out more about how we can help your business, get in touch
-            with us right away!
           </p>
         </div>
         {/* TEXT IMAGE SECTION 4*/}
-        <div className="w-full my-16">
-          <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
-              <Image
-                src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720815657/markiting-4_ytei2h.jpg"
-                alt="design2"
-                width={530}
-                height={530}
-                objectFit="contain"
-              />
-            </div>
-            <div className="w-1/2">
-              <h2 className="text-2xl text-[#5114AE] font-semibold">
-                Search Engine Optimization (SEO)
-              </h2>
-              <p className="text-gray-500 text-base my-4">
-                We can assist you in achieving greater organic ranks and more
-                visibility in search results by conducting proper keyword
-                research and utilize engaging SEO techniques. Our digital
-                marketing agency provides in-depth keyword research, on-page and
-                off-page optimization, and uses Google Search Console to monitor
-                your results. As part of your digital marketing solutions, these
-                techniques enable us to enhance your conversions by bringing in
-                high-quality leads and visitors.
-              </p>
+        <div className="max-w-6xl mx-auto">
+          <div className="w-full my-8 md:my-16">
+            <div className="flex flex-col md:flex-row items-center">
+              <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                <Image
+                  src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720815657/markiting-4_ytei2h.jpg"
+                  alt="service-image"
+                  width={530}
+                  height={530}
+                  className="w-full max-w-[300px] md:max-w-[530px] mx-auto"
+                />
+              </div>
+              <div className="w-full md:w-1/2 px-4 md:px-8">
+                <h2 className="text-xl md:text-2xl text-[#5114AE] font-semibold mb-4">
+                  Search Engine Optimization (SEO)
+                </h2>
+                <p className="text-gray-500 text-base">
+                  We can assist you in achieving greater organic ranks and more
+                  visibility in search results by conducting proper keyword
+                  research and utilize engaging SEO techniques. Our digital
+                  marketing agency provides in-depth keyword research, on-page and
+                  off-page optimization, and uses Google Search Console to monitor
+                  your results. As part of your digital marketing solutions, these
+                  techniques enable us to enhance your conversions by bringing in
+                  high-quality leads and visitors.
+                </p>
+              </div>
             </div>
           </div>
         </div>
 
         {/* TEXT IMAGE SECTION 5*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816026/markiting-5_xxgss1.png"
                 alt="design2"
@@ -347,7 +346,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 On-Page SEO
               </h2>
@@ -367,9 +366,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 6*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816105/markiting-6_rxiyh5.webp"
                 alt="design2"
@@ -378,7 +377,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Off-Page SEO
               </h2>
@@ -397,9 +396,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 7*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816224/markiting-7_eg6d3f.jpg"
                 alt="design2"
@@ -409,7 +408,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Technical SEO
               </h2>
@@ -428,9 +427,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 8*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816422/markiting-8_ghbrsm.jpg"
                 alt="design2"
@@ -439,7 +438,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Local SEO
               </h2>
@@ -462,9 +461,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 9*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816497/markiting-9_mn4004.jpg"
                 alt="design2"
@@ -474,7 +473,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Franchise SEO
               </h2>
@@ -494,9 +493,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 10*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816615/markiting-10_uic2lt.webp"
                 alt="design2"
@@ -505,7 +504,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Link Building
               </h2>
@@ -524,9 +523,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 11*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816709/markiting-11_awzox5.jpg"
                 alt="design2"
@@ -536,7 +535,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Web Design & Development
               </h2>
@@ -557,9 +556,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 12*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816757/markiting-12_f8muf1.webp"
                 alt="design2"
@@ -568,7 +567,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Social Media Marketing
               </h2>
@@ -587,9 +586,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 13*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816805/markiting-13_u1glrs.png"
                 alt="design2"
@@ -599,7 +598,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Pay Per Click (PPC) Management
               </h2>
@@ -619,9 +618,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 14*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816885/markiting-14_vzf4o6.png"
                 alt="design2"
@@ -630,7 +629,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Content Writing
               </h2>
@@ -648,9 +647,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 15*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720816939/markiting-15_sasqcg.jpg"
                 alt="design2"
@@ -660,7 +659,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Web Hosting
               </h2>
@@ -679,9 +678,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 16*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720817036/markiting-16_nloput.jpg"
                 alt="design2"
@@ -690,7 +689,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Conversion Rate Improvement (CRO)
               </h2>
@@ -706,9 +705,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 17*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap flex-row-reverse">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720817119/markiting-17_umqrpt.png"
                 alt="design2"
@@ -718,7 +717,7 @@ const DigitalMarketing = () => {
                 className="ml-auto"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 Video Production
               </h2>
@@ -736,9 +735,9 @@ const DigitalMarketing = () => {
         </div>
 
         {/* TEXT IMAGE SECTION 16*/}
-        <div className="w-full my-16">
+        <div className="w-full px-4 my-16">
           <div className="max-w-6xl mx-auto flex items-center flex-wrap">
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <Image
                 src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720817180/markiting-18_n7flxa.jpg"
                 alt="design2"
@@ -747,7 +746,7 @@ const DigitalMarketing = () => {
                 objectFit="contain"
               />
             </div>
-            <div className="w-1/2">
+            <div className="w-full sm:w-1/2">
               <h2 className="text-2xl text-[#5114AE] font-semibold">
                 E-Commerce Marketing
               </h2>
@@ -767,7 +766,7 @@ const DigitalMarketing = () => {
       </section>
 
       {/* Middle Banner Section */}
-      <div>
+      <div className="px-4 md:px-0">
         <MiddleBannerSection
           heading="Schedule a Free consultancy"
           subHeading="Our expert will be with you in no time"
@@ -775,33 +774,34 @@ const DigitalMarketing = () => {
       </div>
 
       {/* Grow Business Section */}
-      <BusinessSection
-        heading="Let us help you in creating your online presence"
-        subHeading=" Web Design Consultant"
-        para="Our team of web experts will help you with your goal of developing
-              a website and will give you all the technical advice in making it
-              engaging and relevant for your business."
-        btnText="Let's Get Started"
-      />
+      <div className="px-4  md:px-0">
+        <BusinessSection
+          heading="Let us help you in creating your online presence"
+          subHeading="Web Design Consultant"
+          para="Our team of web experts will help you with your goal of developing a website and will give you all the technical advice in making it engaging and relevant for your business."
+          btnText="Let's Get Started"
+        />
+      </div>
 
       {/* Testimonials section */}
-      <div className="my-0 md:my-16">
-        {/* Testimonials Heading */}
-        <div className="mb-6 mt-16" data-aos="zoom-in">
-          <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
+      <div className="my-8 md:my-16 px-4 md:px-0">
+        {/* <div className="mb-6 mt-8 md:mt-16" data-aos="zoom-in">
+          <h5 className="text-center text-xl md:text-2xl font-bold text-[#5114AE]">
             Go through Client Feedbacks
           </h5>
-          <h4 className="text-center text-2xl font-bold md:text-4xl md:font-medium mt-2 text-slate-600">
+          <h4 className="text-center text-xl md:text-2xl font-bold md:text-4xl mt-2 text-slate-600">
             Testimonials
           </h4>
-        </div>
-        <Testimonials />
+        </div> */}
+        <Testimonials4/>
       </div>
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+      <Footer/>
     </section>
+    </>
   );
 };
 

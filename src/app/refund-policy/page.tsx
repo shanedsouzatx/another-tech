@@ -1,9 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import { pricesHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import React from "react";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import Link from "next/link";
 const RefundPolicy = () => {
   return (
+    <>
+    <Navbar/>
     <section>
       {/* Hero Section */}
       <div
@@ -30,70 +34,112 @@ const RefundPolicy = () => {
             concerns. All refund requests will be fulfilled as per the following
             arrangement:
           </p>
-          <p className="text-base text-gray-500 font-semibold md:text-md">
-            If request for refund is made after 12 hours of initial design
-            samples delivery then you would not be eligible for any refund. No
-            refund request will be entertained if you have posted revision on
-            any of the initial design samples provided. All refund requests
-            should be communicated to the support department.
-            https://TechCrafttechnolgies.com, based on the violation of your
-            user agreement reserves the right to approve/disapprove your request
-            on an individual case to case basis. We ensure 100% customer
-            satisfaction for all our services. However, the refund policy is
-            available to accommodate the customers' concerns. All refund
-            requests will be fulfilled as per the following arrangement: - You
-            have chosen a special package. The primary design concept has been
-            approved. - You have demanded revisions. - The cancellation has been
-            made due to reasons non-related to the company. - The company has
-            not been contacted for more than 2 weeks of project. - Company’s
-            policies, or policy, have been violated. - Other company or designer
-            has been approached for the same project. - The creative brief is
-            lacking in required information. - A complete design change has been
-            demanded. - The claim has crossed the given ‘request for refund’
-            time span. - The business is closing or changing name or business. -
-            Reasons such as ‘change of mind’, ‘disagreement with partner’ or
-            other reasons that do not pertain to the service will not be subject
-            to refund under any circumstances. - If a client subscribes for a
-            service bundle and happens to be dissatisfied with a particular
-            service, refund will only be applicable on that particular service
-            and ‘not’ the entire bundle. - The client will not be entitled to
-            any refunds after 15 days, from the date of purchase. - Services
-            including but not limited to Social Media, SEO, Domain Registration
-            and Web Hosting are not entitled to refunds under any circumstances.
-            - In case of websites, refunds will not be entertained once the
-            client has approved the design and the website is sent for
-            development
-          </p>
+          <div className="text-base text-gray-500 font-semibold md:text-md space-y-3">
+  <ul className="list-disc pl-5 space-y-2">
+    <li>
+      If a refund request is made <span className="font-bold">after 12 hours</span> of initial design samples delivery, you are <span className="font-bold">not eligible</span> for a refund.
+    </li>
+    <li>
+      <span className="font-bold">No refund</span> request will be entertained if you have <span className="font-bold">posted a revision</span> on any of the initial design samples.
+    </li>
+    <li>
+      All refund requests should be communicated to the <span className="font-bold">support department</span>.
+    </li>
+    <li>
+      <Link href="https://TechCraftinc.com" className="text-blue-500 hover:underline">TechCraft Inc.</Link> reserves the right to approve/disapprove refund requests on a case-by-case basis based on violations of the <span className="font-bold">user agreement</span>.
+    </li>
+    <li>
+      We ensure <span className="font-bold">100% customer satisfaction</span>, but the refund policy is available to accommodate customer concerns.
+    </li>
+  </ul>
+
+  <h3 className="text-lg font-bold mt-4">Refund requests will be <span className="text-red-500">denied</span> if:</h3>
+
+  <ul className="list-disc pl-5 space-y-2">
+    <li>You have chosen a <span className="font-bold">special package</span>.</li>
+    <li>The <span className="font-bold">primary design concept has been approved</span>.</li>
+    <li>You have <span className="font-bold">requested revisions</span>.</li>
+    <li>Cancellation is due to <span className="font-bold">reasons unrelated</span> to the company.</li>
+    <li>The company has <span className="font-bold">not been contacted for more than 2 weeks</span>.</li>
+    <li><span className="font-bold">Company policies</span> have been violated.</li>
+    <li>Another <span className="font-bold">company or designer</span> has been approached for the same project.</li>
+    <li>The <span className="font-bold">creative brief lacks required information</span>.</li>
+    <li>A <span className="font-bold">complete design change</span> has been requested.</li>
+    <li>The refund request <span className="font-bold">exceeds the allowed timeframe</span>.</li>
+    <li>The <span className="font-bold">business is closing</span> or changing its name.</li>
+    <li>
+      Reasons such as <span className="font-bold">“change of mind”</span>, <span className="font-bold">“disagreement with a partner”</span>, or other <span className="font-bold">non-service-related issues</span> will not be eligible for a refund.
+    </li>
+    <li>
+      If a client subscribes to a <span className="font-bold">service bundle</span> and is dissatisfied with one service, a refund will apply <span className="font-bold">only to that service</span>, not the entire bundle.
+    </li>
+    <li><span className="font-bold">No refunds after 15 days</span> from the date of purchase.</li>
+    <li>
+      Services like <span className="font-bold">Social Media, SEO, Domain Registration, and Web Hosting</span> are <span className="font-bold">non-refundable</span>.
+    </li>
+    <li>
+      <span className="font-bold">Website refunds</span> will not be entertained <span className="font-bold">once the client has approved the design and development has begun</span>.
+    </li>
+  </ul>
+</div>
+
+
+
         </div>
 
-        <div>
-          <h2 className="text-3xl md:text-4xl my-6 text-slate-800">
-            How to claim your refund
-          </h2>
-          <p className="text-base text-gray-500 font-semibold md:text-md">
-            To assure your refund request is approved, please make sure you meet
-            the following requirements: 1. Claim your refund specifying your
-            concern by contacting us via any of the following three modes: i.
-            Tollfree # (667) 423-5532 ii. Live Chat. Click here to start chat
-            now iii. Email. Click Here to send us an email for a prompt response
-            2. We will try to resolve your concern by virtue of our revision
-            policy immediately or else will email you a refund request approval
-            from our refund department. After the refund, your design rights
-            would be obtained by https://TechCrafttechnologies.com and you would
-            not be able to display any version of the design sent by company.
-            Let us also specify that: i. Since the design rights would now be
-            transferred to the company, you agree that you will have no right
-            (direct or indirect) to use any response or other content, work
-            product or media, nor will you have any ownership interest in or to
-            the same. ii. Working in collaboration with the Government Copyright
-            Agencies TechCrafttech.com would share Copyright Acquisition
-            information for the refunded designs that would restrict the re-use
-            of the designs as original designs in the future. If you have any
-            questions or concerns about our Refund Policy, please contact us.
-          </p>
-        </div>
+        <div className="space-y-6 pt-3 md:pt-7 ">
+  <h2 className="text-3xl md:text-4xl font-bold text-slate-800">How to Claim Your Refund</h2>
+
+  <p className="text-base text-gray-500 font-semibold md:text-md">
+    To ensure your refund request is approved, please meet the following requirements:
+  </p>
+
+  <ol className="list-decimal pl-6 space-y-3 text-base text-gray-500 font-semibold md:text-md">
+    <li>
+      Submit your refund request by contacting us through any of the following methods:
+      <ul className="list-disc pl-6 space-y-2">
+        <li>
+          <span className="font-bold">Toll-free:</span> <Link href="tel:+16674235532" className="text-blue-500 hover:underline">(667) 423-5532</Link>
+        </li>
+        <li>
+          <span className="font-bold">Live Chat:</span> <Link href="#" className="text-blue-500 hover:underline">Click here to start chat now</Link>
+        </li>
+        <li>
+          <span className="font-bold">Email:</span> <Link href="mailto:support@techcraftinc.com" className="text-blue-500 hover:underline">Click here to send us an email</Link> for a prompt response.
+        </li>
+      </ul>
+    </li>
+
+    <li>
+      We will try to resolve your concern through our <span className="font-bold">revision policy</span>. If a resolution is not possible, we will email you a refund request approval from our refund department.
+    </li>
+
+    <li>
+      After the refund, your <span className="font-bold">design rights</span> will be transferred to <Link href="https://TechCraftinc.com" className="text-blue-500 hover:underline">TechCraft Inc.</Link>, and you will no longer have the right to display or use any version of the design provided by the company.
+    </li>
+  </ol>
+
+  <div className="border-t border-gray-300 pt-4">
+    <h3 className="text-lg font-bold text-gray-700">Important Notes:</h3>
+    <ul className="list-disc pl-6 space-y-3 text-base text-gray-500 font-semibold md:text-md">
+      <li>
+        Once the design rights are transferred, you agree that you have <span className="font-bold">no right (direct or indirect)</span> to use, modify, or claim ownership of the refunded design.
+      </li>
+      <li>
+        In collaboration with <span className="font-bold">Government Copyright Agencies</span>, <Link href="https://TechCraftinc.com" className="text-blue-500 hover:underline">TechCraft Inc.</Link> will share copyright acquisition information, ensuring that refunded designs cannot be reused as original works in the future.
+      </li>
+    </ul>
+  </div>
+
+  <p className="text-base text-gray-500 font-semibold md:text-md">
+    If you have any questions or concerns about our Refund Policy, please <Link href="#" className="text-blue-500 hover:underline">contact us</Link>.
+  </p>
+</div>
+
       </div>
     </section>
+    <Footer/>
+    </>
   );
 };
 

@@ -10,7 +10,8 @@ import {
   FaPaintBrush,
   FaRegCheckCircle,
 } from "react-icons/fa";
-
+import Location from "@/components/Location/Location";
+import Hero from "@/components/Hero/Hero";
 import Accordian from "@/components/Accordian";
 import { ThreeDCardDemo } from "@/components/ThreeDCardDemo";
 import {
@@ -22,7 +23,7 @@ import {
   motionGraphics,
   illustration,
 } from "@/data/porfolios";
-import { Testimonials } from "@/components/Testimonials";
+import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import BannerSlider from "@/components/BannerSlider";
 import GradientButton from "@/components/GradientButton";
 import Modal from "@/components/Modal/Modal";
@@ -35,6 +36,11 @@ import PricingSection from "@/components/PricingSection";
 // import HeroLottieAnimation from "@/components/HeroLottieAnimation";
 import Image from "next/image";
 import { heroBgImgSrc } from "@/constants/CloudinaryImgUrl";
+import { useScroll, useTransform, motion, animate } from "framer-motion";
+import Navbar1 from "@/components/Navbar1/Navbar1";
+import Footer from "@/components/Footer";
+import Methodology from "@/components/Hero/Methodology/Methodology";
+import StickySection from "@/components/Hero/StickySection";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -44,6 +50,28 @@ export default function Home() {
   );
   const [hoveredIcon, setHoveredIcon] = useState("laptop");
   const [activeTab, setActiveTab] = useState("Logo Design");
+
+  // Add these scroll-based animations
+  const { scrollYProgress } = useScroll();
+  
+  const gradientY1 = useTransform(scrollYProgress, [0, 3], [0, 200]);
+  const gradientY2 = useTransform(scrollYProgress, [0, 6], [0, -200]);
+  const gradientScale = useTransform(scrollYProgress, [0, 5], [1, 1.5]);
+
+  // Add flowing gradient animation variants
+  const flowingGradient = {
+    animate: {
+      x: [0, -100, 0],
+      transition: {
+        x: {
+          repeat: Infinity,
+          repeatType: "reverse",
+          duration: 8,
+          ease: "linear"
+        }
+      }
+    }
+  };
 
   const handleMouseEnter = (icon: string) => {
     setHoveredIcon(icon);
@@ -79,204 +107,31 @@ export default function Home() {
 
   return (
     <>
+    <Navbar1/>
       {/* <HeroParallax products={products} /> */}
       {/* Hero section */}
       <section
-        className="pt-36 pb-16 bg-no-repeat bg-cover md:pt-44 md:pb-32"
+        className="pt-11 pb-16 bg-no-repeat bg-cover md:pt-20 md:pb-32"
         style={{
-          backgroundImage: `url(${heroBgImgSrc})`,
+          // backgroundImage: `url(${heroBgImgSrc})`,
         }}
       >
-        <div className="max-w-6xl relative mx-auto flex flex-col md:flex-row justify-between px-4 w-full left-0 top-0">
-          <div className="md:w-1/2" data-aos="fade-down">
-            <h2 className="text-[#5114AE] font-semibold text-2xl mb-3 md:mb-5 z-50">
-              Exclusivity. Uniqueness. Innovation.
-            </h2>
-            <h1 className="text-[1.6rem] md:text-5xl font-medium dark:text-white flex flex-col space-y-0 md:space-y-2 z-50">
-              <span> You dream it,</span>
-              <span>We digitalize It</span>
-              <span>Your growth and</span>
-              <span> success is our goal!</span>
-            </h1>
-            <p className="max-w-[320px] md:max-w-2xl text-base md:text-lg mt-3 md:mt-5 dark:text-neutral-200 z-50">
-              Drive your brand forward with innovative digital tactics. We
-              partner with you to transform your growth and redefine your
-              success.
-            </p>
-            {/* ORM ICONS */}
-            <div className="flex items-center gap-4 mt-5 z-50">
-              <a href="https://www.trustpilot.com/review/techcraftinc.com">
-                <Image
-                  src={'/assets/images/trust.png'}
-                  alt="trustpilot"
-                  className="w-24 h-auto md:w-[130px] md:h-auto"
-                  width={130}
-                  height={130}
-                />
-              </a>
-              <a href="#">
-                <Image
-                  src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047150/google_fdnuh4.png"
-                  alt="google"
-                  className="w-24 h-auto md:w-[130px] md:h-auto"
-                  width={130}
-                  height={130}
-                />
-              </a>
-              {/* <a href="#" className="mt-4">
-                <Image
-                  src="https://res.cloudinary.com/dautl8x6a/image/upload/v1720047182/bings-logo_pbyvk7.png"
-                  alt="bingads"
-                  className="w-24 h-auto md:w-[130px] md:h-auto"
-                  width={130}
-                  height={130}
-                />
-              </a> */}
-            </div>
+        <Hero />
+        <div>
+         
+       <div>
 
-            <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-3 md:space-y-0 mt-8">
-              <GradientButton
-                text="Let's Get Started"
-                onClick={() => openModal(setIsModalOpen)}
-              />
-              <OutlineButton text="Chat With Us" />
-            </div>
-          </div>
-
-          {/* Lottie animation section */}
-          <div
-            className="hidden md:block w-[60%] object-contain"
-            data-aos="fade-left"
-          >
-            {/* <HeroLottieAnimation /> */}
-            <Image
-              src="https://res.cloudinary.com/dautl8x6a/image/upload/v1724802024/pngwing.com-5-1-1024x607_iowc2o.png"
-              alt="Hero-section-image1"
-              width={1024} // Specify the image width
-              height={807} // Specify the image height
-            />
-          </div>
-
-          <Modal
-            isOpen={isModalOpen}
-            onClose={() => closeModal(setIsModalOpen)}
-          />
+       </div>
+        
         </div>
       </section>
 
       {/* Slider */}
       <BannerSlider />
-      {/* METHODOLOGY SECTION */}
-      <section className="mx-auto my-12 md:my-16 max-w-6xl px-4 flex flex-col md:flex-row items-center justify-between">
-        {/* Text and Button Section */}
-        <div className="w-full md:w-1/2 mb-8 md:mb-0" data-aos="zoom-in-right">
-          <h1 className="text-2xl font-bold md:text-4xl md:font-semibold dark:text-white md:space-y-1 md:flex md:flex-col">
-            <span>Power your business </span>
-            <span>Growth With An </span>
-            <span>Optimized Website</span>
-          </h1>
-
-          <p className="text-sm md:text-base my-6 text-neutral-600 dark:text-neutral-200">
-            Tech Craft features a dedicated team of web development and digital
-            marketing experts focused on delivering client satisfaction through
-            innovative design and development. We guarantee results that
-            showcase our technical expertise and creativity in website design.
-          </p>
-          <button
-            className="text-sm font-medium cursor-pointer py-3 w-full md:w-52 md:py-4 bg-gradient-to-r from-[#5114AE] to-[#802FCE] text-white rounded-md relative overflow-visible"
-            onClick={() => openModal(setIsModalOpen)}
-          >
-            DISCUSS YOUR IDEA
-          </button>
-        </div>
-
-        {/* Image and Icons Section */}
-        <div className="w-full md:w-1/2 flex justify-center">
-          <div className="relative flex justify-center items-center border-4 border-dotted border-[#33174E] rounded-full h-[315px] md:h-[500px] w-[310px] md:w-[500px]">
-            {/* Methodologies Texts Section */}
-            <div>
-              <h5 className="text-center text-lg text-[#5114AE] font-extrabold">
-                Our Methodology
-              </h5>
-              <div>
-                <h3 className="text-[#333] text-lg md:text-xl my-3 font-bold text-center">
-                  {title}
-                </h3>
-                <p
-                  className={`text-center text-sm max-w-52 md:max-w-xs text-[#687087] overflow-auto`}
-                  style={{
-                    // Apply max-height only for mobile screens
-                    maxHeight: "80px", // Adjust as needed
-                    overflowY: "scroll", // Enable vertical scrolling
-                    scrollbarWidth: "none",
-                  }}
-                >
-                  {description}
-                </p>
-              </div>
-            </div>
-
-            {/* Relative methodologies icons */}
-            <div
-              className={`group flex justify-center items-center ${
-                hoveredIcon === "laptop"
-                  ? "bg-white border-2 border-[#33174E]"
-                  : "bg-gradient-to-r from-[#5114AE] to-[#802FCE] border-2 border-white"
-              } cursor-pointer p-3 md:p-5 absolute right-[10px] md:right-[50px] top-[20px] md:top-[-5px] rounded-full shadow-2xl transition duration-300`}
-              onMouseEnter={() => handleMouseEnter("laptop")}
-            >
-              <FaLaptop
-                className={`transition duration-300 ${
-                  hoveredIcon === "laptop" ? "text-[#33174E]" : "text-white"
-                } text-[30px] md:text-[50px]`} // Adjusted for desktop
-              />
-            </div>
-            <div
-              className={`group flex justify-center items-center ${
-                hoveredIcon === "bullhorn"
-                  ? "bg-white border-2 border-[#33174E]"
-                  : "bg-gradient-to-r from-[#5114AE] to-[#802FCE] border-2 border-white"
-              } cursor-pointer p-3 md:p-5 absolute right-[-25px] md:right-[-30px] top-[90px] md:top-[105px] rounded-full shadow-2xl transition duration-300`}
-              onMouseEnter={() => handleMouseEnter("bullhorn")}
-            >
-              <FaBullhorn
-                className={`transition duration-300 ${
-                  hoveredIcon === "bullhorn" ? "text-[#33174E]" : "text-white"
-                } text-[30px] md:text-[50px]`}
-              />
-            </div>
-            <div
-              className={`group flex justify-center items-center ${
-                hoveredIcon === "rocket"
-                  ? "bg-white border-2 border-[#33174E]"
-                  : "bg-gradient-to-r from-[#5114AE] to-[#802FCE] border-2 border-white"
-              } cursor-pointer p-3 md:p-5 absolute right-[-20px] md:right-[-40px] top-[170px] md:top-[245px] rounded-full shadow-2xl transition duration-300`}
-              onMouseEnter={() => handleMouseEnter("rocket")}
-            >
-              <FaRocket
-                className={`transition duration-300 ${
-                  hoveredIcon === "rocket" ? "text-[#33174E]" : "text-white"
-                } text-[30px] md:text-[50px]`}
-              />
-            </div>
-            <div
-              className={`group flex justify-center items-center ${
-                hoveredIcon === "paintbrush"
-                  ? "bg-white border-2 border-[#33174E]"
-                  : "bg-gradient-to-r from-[#5114AE] to-[#802FCE] border-2 border-white"
-              } cursor-pointer p-3 md:p-5 absolute right-[15px] md:right-[30px] top-[240px] md:top-[370px] rounded-full shadow-2xl transition duration-300`}
-              onMouseEnter={() => handleMouseEnter("paintbrush")}
-            >
-              <FaPaintBrush
-                className={`transition duration-300 ${
-                  hoveredIcon === "paintbrush" ? "text-[#33174E]" : "text-white"
-                } text-[30px] md:text-[50px]`}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <StickySection/>
+     {/* methodology */}
+     {/* <Methodology/> */}
+     {/* <HorizontalScroll/> */}
       {/* ACCORDIAN */}
       <div className="bg-[#EEEEEE] py-16">
         <Accordian />
@@ -285,16 +140,16 @@ export default function Home() {
       <BusinessSection
         subHeading="Custom Web Design and Marketing Solutions for Business Growth"
         isPhoneIcon={true}
-        para="Boost your business with a customized website and digital marketing strategy! At Tech Craft, we’re home to seasoned designers, developers, and digital marketing experts who are focused on delivering results with excellence. Ready to reinforce your online presence and drive more traffic to your website? Let’s discuss. We are just a text away."
+        para="Boost your business with a customized website and digital marketing strategy! At Tech Craft, we're home to seasoned designers, developers, and digital marketing experts who are focused on delivering results with excellence. Ready to reinforce your online presence and drive more traffic to your website? Let's discuss. We are just a text away."
         btnText="(667) 423-5532"
       />
       {/* Portfolio Section*/}
       <div className="py-12 md:py-16 -z-50 bg-[#F9F9F9]">
         {/* Portfolio heading */}
         <div className="max-w-6xl mx-auto px-4 md:px-8" data-aos="zoom-in">
-          <h5 className="text-center text-xl md:text-2xl text-[#5114AE] font-semibold">
+          <h2 className="text-center text-xl md:text-2xl text-[#5114AE] font-semibold">
             Showcase of Success
-          </h5>
+          </h2>
           <p className="text-center text-sm md:text-base text-[#687087] mb-6 md:mb-8 mt-4 md:mt-6">
             Why rely solely on what we say? Explore our successful portfolio and
             see the excellence for yourself.
@@ -398,7 +253,7 @@ export default function Home() {
             </h2>
             <p className="text-sm md:text-base my-6 max-w-md text-slate-600">
               Let Tech Craft revamp your brand identity to dominate the digital
-              world by reinforcing the brand’s online presence, streamlining
+              world by reinforcing the brand's online presence, streamlining
               your operations, and engaging your target audience more
               effectively. As for now we are leveraging:
             </p>
@@ -435,7 +290,7 @@ export default function Home() {
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
-        <div className="mb-6" data-aos="zoom-in">
+        {/* <div className="mb-6" data-aos="zoom-in">
           <h5 className="text-center text-2xl font-bold md:text-3xl text-[#5114AE] md:font-medium ">
             Go through Client Feedbacks
           </h5>
@@ -443,12 +298,13 @@ export default function Home() {
             Testimonials
           </h4>
         </div>
-        <Testimonials />
+        <Testimonials /> */}
+      <Testimonials4/>
       </div>
       {/* Projects Count */}
       <CountSection />
-
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
+<Footer/>
     </>
   );
 }
