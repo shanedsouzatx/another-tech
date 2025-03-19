@@ -5,8 +5,20 @@ import { motion } from "framer-motion"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+type Heroprops = {
+  className?:any
+  gradient?: boolean | any ,
+  blur?: boolean | any ,
+  title?: string | any ,
+  subtitle?: string | any ,
+  image?: any | string ,
+  actions?: React.ReactNode | any ,
+  titleClassName?: string | any ,
+  subtitleClassName?: string | any ,
+  actionsClassName?: string | any ,
+} 
 
-const Hero = React.forwardRef<HTMLElement, HeroProps>(
+const Hero = React.forwardRef<HTMLElement, Heroprops>(
   (
     {
       className,
@@ -124,7 +136,7 @@ const Hero = React.forwardRef<HTMLElement, HeroProps>(
             )}
             {actions && actions.length > 0 && (
               <div className={cn("flex gap-4", actionsClassName)}>
-                {actions.map((action, index) => (
+                {actions.map((action:any, index:any) => (
                   <Button
                     key={index}
                     variant={action.variant || "default"}
