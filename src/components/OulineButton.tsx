@@ -21,7 +21,7 @@ const OutlineButton: React.FC<ButtonProps> = ({
 
   return (
     <button
-      className={`text-[#5114AE] text-sm font-semibold rounded-md cursor-pointer py-3 w-full md:w-44 md:py-4 border-2 border-[#5114AE] bg-transparent hover:bg-[#5114AE] hover:text-white transition-colors duration-300`}
+      className={` text-black text-base border-radius-50%  font-semibold  border-2 border-radius-50% rounded-full cursor-pointer py-3 w-full md:w-44 md:py-4 border-2 border-[#48128A] hover:border-none bg-transparent hover:bg-gradient-to-b from-[#48128A] to-[#8B3791]  hover:text-white transition-colors duration-300 `}
       onClick={handleChat}
     >
       {text}

@@ -7,12 +7,16 @@ import { Lato } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import MyLayout from "@/components/MyLayout";
-
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"], // Specify the weights you want to use
-});
-
+import { Poppins } from 'next/font/google'
+// const lato = Lato({
+//   subsets: ["latin"],
+//   weight: ["400", "700"], // Specify the weights you want to use
+// });
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'], // Add desired font weights
+  variable: '--font-poppins', // Custom CSS variable for Tailwind
+})
 // Create a constant for the schema data
 const schemaData = {
   "@context": "https://schema.org",
@@ -167,7 +171,7 @@ export const metadata: Metadata = {
           <meta name="twitter:site" content="@techcraftinc" />
           <meta name="twitter:creator" content="@techcraftinc" />
         </head>
-        <body className={lato.className}>
+        <body className={poppins.className}>
           {/* Google Tag Manager (noscript) */}
           <noscript>
             <iframe

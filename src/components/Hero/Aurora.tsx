@@ -117,7 +117,7 @@ interface AuroraProps {
 
 export default function Aurora(props: AuroraProps) {
   const {
-    colorStops = ["#9B4871", "#CC75B8", "#9B4871"],
+    colorStops = ["#FFFFFF", "#FFFFFF", "#FFFFFF"],
     amplitude = 1.0,
     blend = 0.5,
   } = props;
@@ -210,5 +210,5 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude]);
 
-  return <div ref={ctnDom} className="w-full !h-[50vh] opacity-70 blur-[10px] overflow-hidden -mt-20 absolute" />;
+  return <div ref={ctnDom} className="w-full z-[-999] !h-[50vh] opacity-40 blur-[10px] overflow-hidden -mt-20 absolute" />;
 }

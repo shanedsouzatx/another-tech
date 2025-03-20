@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/brief1/logo-design-form.tsx", "src/components/Services/TechStackShowcase"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/brief1/logo-design-form.tsx", "src/components/Services/TechStackShowcase", "src/components/Anees/Footer1.tsx"],
   "exclude": ["node_modules"]
 }

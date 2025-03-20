@@ -49,7 +49,7 @@ export const HoverEffect = ({
           </AnimatePresence>
           <Card index={idx}>
             <CardDescription>{item.count + "+"}</CardDescription>
-            <CardTitle>{item.title}</CardTitle>
+            <CardTitle className="text-2xl">{item.title}</CardTitle>
           </Card>
         </Link>
       ))}
@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "h-full w-full shadow-2xl p-4 overflow-hidden bg-white border border-transparent dark:border-white/[0.2] group-hover:border-[#115791] relative z-20",
+        "h-full w-full shadow-2xl p-4 overflow-hidden bg-white border border-transparent dark:border-white/[0.2] group-hover:border-[#48128A] relative z-20",
         className
       )}
       data-aos={`${index % 2 === 0 ? "flip-right" : "flip-left"}`}
@@ -90,7 +90,7 @@ export const CardTitle = ({
   return (
     <h2
       className={cn(
-        "font-semibold text-center text-slate-700 text-xl md:text-2xl md:text-left",
+        "font-semibold text-center text-slate-700 text-xl md:text-xl md:text-left",
         className
       )}
     >
@@ -108,7 +108,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "text-[#5114AE] text-center font-bold text-4xl mb-3 md:text-left",
+        "text-[#5114AE] text-center font-bold text-5xl mb-3 md:text-left",
         className
       )}
     >

@@ -37,7 +37,7 @@ const BannerSlider = ({ isMargin }: { isMargin?: boolean }) => {
           {[...imageSrcs, ...imageSrcs, ...imageSrcs].map((data, index) => (
             <div key={index} className="cursor-pointer flex-shrink-0">
               <Link href={data.redirectUrl} target="_blank" rel="noopener noreferrer">
-                <Image src={data.imgSrc} alt={`cl-${index + 1}`} width={200} height={160} className="transition-transform duration-300   hover:scale-110" />
+                <Image src={data.imgSrc} alt={`cl-${index + 1}`} width={240} height={200} className="transition-transform duration-300  hover:scale-110" />
               </Link>
             </div>
           ))}

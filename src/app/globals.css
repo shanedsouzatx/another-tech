@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -349,12 +351,12 @@
 .overflow-y-scroll {
   scrollbar-width: thin;
   /* Make it thin */
-  scrollbar-color: #5114AE #f1f1f1;
+  scrollbar-color: #000000 #f1f1f1;
   /* Gradient background with default track color */
 }
 
 .overflow-y-scroll::-webkit-scrollbar-thumb:vertical {
-  background: linear-gradient(#5114AE, #802FCE);
+  background: linear-gradient(#000000, #000000);
   /* Gradient background */
   border-radius: 10px;
   /* Make the scrollbar rounded */
@@ -391,13 +393,13 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to right, #5114AE, #802FCE);
+  background: linear-gradient(to right, #000000, #000000);
 
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to right, #5114AE, #802FCE);
+  background: linear-gradient(to right, #000000, #000000);
 }
 
 /* Smooth scrolling */
@@ -716,7 +718,7 @@ body.fancybox-active.compensate-for-scrollbar {
   transform: translateY(-50%);
   width: 11px;
   height: 11px;
-  background-color: #802FCE;
+  background-color: #000000;
   border-radius: 50%;
 }
 
@@ -802,7 +804,7 @@ body.fancybox-active.compensate-for-scrollbar {
 
 
 ::selection {
-  background-color: #2C275B;
+  background-color: #2e2d2d;
   color: white; /* Optional: Change text color when selected */
 }
 .aurora-container {

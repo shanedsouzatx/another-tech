@@ -1,16 +1,16 @@
 export const logoDesign = [
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876443/t-1_csgip1.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876594/t-2_l1d2rh.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876637/t-3_f7vgih.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876714/t-4_xgtjkh.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876755/t-5_owe5ib.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876785/t-6_mhvppg.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876884/t-7_og0zdu.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876929/t-8_il3zv0.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719876969/t-9_yhlvqr.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719877004/t-10_k2wnza.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719877160/t-11_fvdbqb.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719877197/t-12_vhx5v2.png",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503120/Portfolio_Logos-01_zh5bso.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-02_svzwvg.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503120/Portfolio_Logos-03_gnppyv.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503118/Portfolio_Logos-04_r3t3un.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-05_e3h6wf.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-06_rltkkz.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503118/Portfolio_Logos-07_fclfyd.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-08_vaus7y.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503118/Portfolio_Logos-09_dfvhnw.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-10_dstmf3.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-11_modpsr.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503119/Portfolio_Logos-12_bl4nau.jpg",
 ];
 
 export const webDesign = [
@@ -81,12 +81,12 @@ export const motionGraphics = [
 ];
 
 export const illustration = [
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952788/t-1_tl4vj1.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952826/t-2_rbry0q.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952855/t-3_wkumxl.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952877/t-4_uxtygy.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952902/t-5_ynngvu.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952925/t-6_wbhwf3.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1719952949/t-7_tlp1je.png",
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1721329038/t-8_umymy1.png",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503566/02_z0tph3.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503566/03_cqhhiw.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503565/01_zlwgtc.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503565/07_icmc1i.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503565/08_mdbdvw.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503565/05_gko30h.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503564/06_suiewx.jpg",
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742503564/04_la3ez6.jpg",
 ];
