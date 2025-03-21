@@ -28,10 +28,12 @@ export default function Feature() {
       const container = scrollContainerRef.current
       const element = contentRefs.current[categoryId]
 
-      container.scrollTo({
-        left: element.offsetLeft - 24, // Adjust for padding
-        behavior: "smooth",
-      })
+      if (element) {
+        container.scrollTo({
+          left: element.offsetLeft - 24, // Adjust for padding
+          behavior: "smooth",
+        })
+      }
     }
   }
 
