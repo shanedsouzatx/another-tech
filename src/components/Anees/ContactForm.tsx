@@ -75,7 +75,7 @@ const ContactForm = () => {
   return (
     <div className=" ">
 
-    <div className="max-w-6xl mx-auto bg-gradient-to-b from-white via-white to-[#BCBEC0]/70 py-20 px-8 footer-form-shadow rounded-2xl">
+    <div className="max-w-6xl mx-auto bg-gradient-to-b from-white via-white to-[#BCBEC0]/70 py-9 px-8 footer-form-shadow rounded-2xl">
       <div className="flex flex-col ">
         <h3 className="text-3xl text-center md:text-left font-semibold uppercase  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text ">
           Ready to Experience Business Growth Beyond Limits?
@@ -155,7 +155,7 @@ const ContactForm = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full text-lg font-semibold cursor-pointer py-4 mt-6 bg-gradient-to-b from-[#48128A] to-[#8B3791] text-white rounded-full transform transition-all duration-300 hover:shadow-[0_8px_30px_rgb(81,20,174,0.3)] hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
+              className="w-full text-lg font-semibold cursor-pointer py-4 mt-6 border-2 border-[#48128A] hover:border-none bg-transparent hover:bg-gradient-to-b from-[#48128A] to-[#8B3791]  hover:text-white transition-colors duration-300 rounded-full transform transition-all duration-300 hover:shadow-[0_8px_30px_rgb(81,20,174,0.3)] hover:-translate-y-1 disabled:opacity-70 disabled:cursor-not-allowed"
             >
               {loading ? "Submitting..." : "Submit Now"}
             </button>
