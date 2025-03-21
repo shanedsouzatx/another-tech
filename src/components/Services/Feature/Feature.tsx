@@ -56,8 +56,8 @@ export default function Feature() {
   }
 
   return (
-    <main className="min-h-screen  text-white bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50  ">
-      <div className="max-w-7xl mx-auto pt-16 pt-20 mt-[100px] p-6 md:p-12 ">
+    <main className="h-auto z-50 text-white bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat   ">
+      <div className="max-w-7xl mx-auto py-1    p-6 md:p-12 ">
         {/* Large Heading */}
         <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12 max-w-4xl mx-auto uppercase bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text  ">
           Real-world examples of how we have helped companies achieve their marketing objectives.

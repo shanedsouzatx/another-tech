@@ -197,7 +197,7 @@ export default function TechStackShowcase() {
     <div className=" bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
 
     <div className="container mx-auto py-12 px-4 ">
-      <div className="grid md:grid-cols-2 gap-8 mb-12">
+      <div className="grid md:grid-cols-2 gap-8 mb-3 ">
       <div>
   <h1 className="text-4xl md:text-5xl font-bold  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text  leading-tight uppercase">
     Elevate Your Brand with Powerful Website Content Writing
@@ -218,7 +218,7 @@ export default function TechStackShowcase() {
         onValueChange={(value) => setActiveTab(value as TabKey)}
         className="w-full"
       >
-        <div className="flex justify-center mb-11 ">
+        <div className="flex justify-center mb-4 ">
           <TabsList className="grid grid-cols-5 w-full max-w-3xl">
             <TabsTrigger
               value="seo"

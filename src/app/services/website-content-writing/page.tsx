@@ -27,12 +27,12 @@ export default function Home() {
       <AllHero />
       <BannerSlider1 />
       <FeatureStepsDemo />
-      <main className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100">
+      <main className="bg-gradient-to-b from-slate-50 to-slate-100">
       <TechStackShowcase/>
     </main>
-      <div style={{ height: "600px", position: "relative" }}>
+      {/* <div style={{ height: "300px", position: "relative" }}> */}
         <CircularGallery bend={3} textColor="black" borderRadius={0.05} />
-      </div>
+      {/* </div> */}
       <Feature/>
       <Pricing1/>
       <NewsLetter/>

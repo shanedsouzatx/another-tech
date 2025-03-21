@@ -692,15 +692,15 @@ export default function CircularGallery({
   }, [items, bend, textColor, borderRadius, font]);
   return (
     <div className="bg-gradient-to-b from-[#48128A]  to-[#8B3791]">
-     <div  className="text-center pt-7 -mb-10 mt-7 md:text-left">
-        <h2 className="bg-gradient-to-b from-white via-white to-[#BCBEC0]/70   text-transparent bg-clip-text text-4xl md:text-6xl font-bold pt-7 mt-7 uppercase text-center" >
+     <div  className="text-center  md:text-left">
+        <h2 className="bg-gradient-to-b from-white via-white to-[#BCBEC0]/70   text-transparent bg-clip-text text-4xl md:text-6xl font-bold pt-7 uppercase text-center" >
         A Vision That Moves.
         </h2>
         <p className="text-center  text-sm md:text-base text-white ">
         Seamlessly blending creativity and technology, our solutions are built to inspire. Let’s create something extraordinary.
         </p>
       </div>
-  <div className="circular-gallery min-h-[70vh] " ref={containerRef} />
+  <div className="circular-gallery min-h-[50vh] " ref={containerRef} />
   </div>
 
   )
