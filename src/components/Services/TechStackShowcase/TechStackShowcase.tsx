@@ -197,14 +197,14 @@ export default function TechStackShowcase() {
     <div className=" bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
 
     <div className="container mx-auto py-12 px-4 ">
-      <div className="grid md:grid-cols-2 gap-8 mb-3 ">
+      <div className="gap-8 mb-3 ">
       <div>
-  <h1 className="text-4xl md:text-5xl font-bold  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text  leading-tight uppercase">
+  <h1 className="text-4xl text-center md:text-5xl font-bold  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text  leading-tight uppercase">
     Elevate Your Brand with Powerful Website Content Writing
   </h1>
 </div>
 <div>
-  <p className="text-lg md:text-xl  text-slate-600"  style={{ lineHeight: '1.2' }}>
+  <p className="text-base md:text-lg px-9 mb-11 md:px-20 text-center  text-slate-600"  style={{ lineHeight: '1.2' }}>
     Craft compelling, SEO-optimized content that captivates your audience and boosts search rankings.  
     From persuasive website copy to engaging blog posts, we create high-quality content that drives traffic, builds credibility, and converts visitors into loyal customers.
   </p>

@@ -1,3 +1,4 @@
+'use client'
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -10,7 +11,7 @@ const Accordion = () => {
   };
 
   return (
-    <div className="max-w-6xl mx-auto px-4 md:px-0">
+    <div className="max-w-6xl py-2 md:py-9 mx-auto px-4 md:px-0">
       {/* Text Section */}
       <div data-aos="zoom-in" className="text-center md:text-left">
         <h2 className="text-2xl md:text-4xl text-left font-bold text-[#333] mb-4">

@@ -6,6 +6,9 @@ import CircularGallery from "@/components/Services/Service2/CircularGallery";
 import TechStackShowcase from "@/components/Services/TechStackShowcase/TechStackShowcase";
 import Feature from "@/components/Services/Feature/Feature";
 import Footer1 from "@/components/Services/Footer/Footer1";
+import ContactForm from "@/components/Anees/ContactForm";
+
+
 import NewsLetter from "@/components/Services/NewsLetter/NewsLetter";
 import AgencyStatistics, {
   ClientSatisfaction,
@@ -20,6 +23,7 @@ import BannerSlider1 from "@/components/Anees/BannerSlider1";
 
 import Testimonials1 from "@/components/Anees/Testimonials1";
 import Pricing1 from "@/components/Anees/Pricing1";
+import Accordian from "@/app/anees/Accordian-inner";
 export default function Home() {
   return (
     <>
@@ -34,11 +38,17 @@ export default function Home() {
         <CircularGallery bend={3} textColor="black" borderRadius={0.05} />
       {/* </div> */}
       <Feature/>
-      <Pricing1/>
-      <NewsLetter/>
+      {/* <Pricing1/> */}
       <Experties/>
-      
+      <NewsLetter/>
+      <StatisticsSection/>
       <Testimonials1 />
+      <Accordian/>
+      <div className="!py-32 !bg-gradient-to-b from-[#48128A]  to-[#8B3791] ">
+
+<ContactForm/>
+      </div>
+
       <Footer1/>
     </>
   );
