@@ -210,5 +210,5 @@ export default function Aurora(props: AuroraProps) {
     };
   }, [amplitude]);
 
-  return <div ref={ctnDom} className="w-full z-[-999] !h-[50vh] opacity-40 blur-[10px] overflow-hidden -mt-20 absolute" />;
+  return <div ref={ctnDom} className="w-full  !h-[50vh] opacity-40 blur-[10px] overflow-hidden -mt-20 absolute" />;
 }

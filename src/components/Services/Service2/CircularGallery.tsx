@@ -672,9 +672,9 @@ interface CircularGalleryProps {
 export default function CircularGallery({
   items,
   bend = 3,
-  textColor = "black",
+  textColor = "white",
   borderRadius = 0.05,
-  font = "bold 30px DM Sans",
+  font = "bold 70px DM Sans",
 }: CircularGalleryProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {
@@ -690,5 +690,18 @@ export default function CircularGallery({
       app.destroy();
     };
   }, [items, bend, textColor, borderRadius, font]);
-  return <div className="circular-gallery bg-gradient-to-r from-[#150100] via-[#D9A4E3] to-[#080611] " ref={containerRef} />;
+  return (
+    <div className="bg-gradient-to-b from-[#48128A]  to-[#8B3791]">
+     <div  className="text-center pt-7 -mb-10 mt-7 md:text-left">
+        <h2 className="bg-gradient-to-b from-white via-white to-[#BCBEC0]/70   text-transparent bg-clip-text text-4xl md:text-6xl font-bold pt-7 mt-7 uppercase text-center" >
+        A Vision That Moves.
+        </h2>
+        <p className="text-center  text-sm md:text-base text-white ">
+        Seamlessly blending creativity and technology, our solutions are built to inspire. Let’s create something extraordinary.
+        </p>
+      </div>
+  <div className="circular-gallery min-h-[70vh] " ref={containerRef} />
+  </div>
+
+  )
 }

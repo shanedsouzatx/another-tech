@@ -73,8 +73,10 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="max-w-6xl mx-auto bg-gradient-to-b from-white via-white to-[#BCBEC0]/70  pt-12 pb-8 px-8 my-10 footer-form-shadow rounded-2xl">
-      <div className="flex flex-col">
+    <div className=" ">
+
+    <div className="max-w-6xl mx-auto bg-gradient-to-b from-white via-white to-[#BCBEC0]/70 py-20 px-8 footer-form-shadow rounded-2xl">
+      <div className="flex flex-col ">
         <h3 className="text-3xl text-center md:text-left font-semibold uppercase  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text ">
           Ready to Experience Business Growth Beyond Limits?
         </h3>
@@ -167,6 +169,7 @@ const ContactForm = () => {
           </div>
         </div>
       </form>
+    </div>
     </div>
   )
 }

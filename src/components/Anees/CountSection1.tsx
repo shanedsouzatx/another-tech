@@ -8,7 +8,7 @@ import { CardHoverEffectDemo } from "../CardHoverEffectDemo";
 const CountSection1 = () => {
   return (
     <div
-      className="z-50 bg-no-repeat  bg-cover my-16"
+      className="z-50 bg-no-repeat  bg-cover mt-16"
       style={{
         backgroundImage: ` url(${bannerPerce})`,
       }}

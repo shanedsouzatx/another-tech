@@ -46,7 +46,7 @@ export default function Navbar2() {
   return (
     <div
       className={cn(
-        "w-full transition-all sticky duration-500 relative fixed top-0",
+        "w-full transition-all sticky duration-500 relative fixed top-0 z-[999] ",
         isScrolled
           ? "fixed sticky top-0 left-0 right-0  backdrop-blur-sm shadow-lg z-50 py-7  animate-in duration-300"
           : "relative",

@@ -11,7 +11,7 @@ const Accordion1 = () => {
   };
 
   return (
-    <div className="-mt-32   min-h-screen top-0 -z-50 bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
+    <div className="-mt-32   top-0 -z-50 bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
 
     <div className="max-w-6xl mx-auto py-9 px-4 md:px-0  ">
       {/* Text Section */}

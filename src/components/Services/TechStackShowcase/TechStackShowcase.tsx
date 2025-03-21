@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs"
-
+import Image from "next/image"
 // Define the tab types to ensure type safety
 type TabKey = "seo" | "blogging" | "ecommerce" | "technical" | "branding"
 
@@ -194,17 +194,17 @@ export default function TechStackShowcase() {
   }
 
   return (
-    <div className="">
+    <div className=" bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
 
     <div className="container mx-auto py-12 px-4 ">
       <div className="grid md:grid-cols-2 gap-8 mb-12">
       <div>
-  <h1 className="text-4xl font-bold text-slate-800 leading-tight">
+  <h1 className="text-4xl md:text-5xl font-bold  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text  leading-tight uppercase">
     Elevate Your Brand with Powerful Website Content Writing
   </h1>
 </div>
 <div>
-  <p className="text-lg text-slate-600">
+  <p className="text-lg md:text-xl  text-slate-600"  style={{ lineHeight: '1.2' }}>
     Craft compelling, SEO-optimized content that captivates your audience and boosts search rankings.  
     From persuasive website copy to engaging blog posts, we create high-quality content that drives traffic, builds credibility, and converts visitors into loyal customers.
   </p>
@@ -218,35 +218,35 @@ export default function TechStackShowcase() {
         onValueChange={(value) => setActiveTab(value as TabKey)}
         className="w-full"
       >
-        <div className="flex justify-center mb-8">
-          <TabsList className="grid grid-cols-5 w-full max-w-2xl">
+        <div className="flex justify-center mb-11 ">
+          <TabsList className="grid grid-cols-5 w-full max-w-3xl">
             <TabsTrigger
               value="seo"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500"
+              className="text-lg font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
             >
               SEO
             </TabsTrigger>
             <TabsTrigger
               value="blogging"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500"
+              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
             >
               Blogging
             </TabsTrigger>
             <TabsTrigger
               value="ecommerce"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500"
+              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
             >
               Ecommerce
             </TabsTrigger>
             <TabsTrigger
               value="technical"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500"
+              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
             >
               Technical
             </TabsTrigger>
             <TabsTrigger
               value="branding"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-orange-500 data-[state=active]:border-b-2 data-[state=active]:border-orange-500"
+              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
             >
               Branding
             </TabsTrigger>
@@ -263,11 +263,11 @@ export default function TechStackShowcase() {
             className="mt-8"
           >
             <div className="text-center mb-8">
-              <h2 className="text-2xl font-semibold text-slate-800 mb-3">{tabData[activeTab].title}</h2>
+              <h2 className="text-2xl md:text-3xl font-semibold text-black  mb-6">{tabData[activeTab].title}</h2>
               <p className="text-slate-600 max-w-3xl mx-auto">{tabData[activeTab].description}</p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-11 ">
               {tabData[activeTab].technologies.map((tech, index) => (
                 <motion.div
                   key={tech.name}
@@ -284,9 +284,12 @@ export default function TechStackShowcase() {
                       transition: { duration: 0.2 },
                     }}
                   >
-                    <img src={tech.icon || "/placeholder.svg"} alt={tech.name} className="w-[100%] h-[100%] object-contain !p-0 !m-0 " />
+                    <Image src={tech.icon || "/placeholder.svg"} alt={tech.name} 
+                    width={100}
+                    height={100}
+                    className="w-[100%] h-[100%] object-contain !p-0 !m-0 " />
                   </motion.div>
-                  <h3 className="text-sm font-medium text-[#221E46] text-center">{tech.name}</h3>
+                  <h3 className="text-md font-medium text-[#221E46] text-center">{tech.name}</h3>
                   <div className="mt-2  group-hover:scale-105 group-hover:max-h-24 transition-all duration-300 overflow-hidden">
                     <p className="text-base text-slate-600 text-center px-2">{tech.description}</p>
                   </div>

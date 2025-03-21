@@ -16,7 +16,7 @@ export default function Hero2() {
   };
 
   return (
-    <div className="-mt-16  bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
+    <div className="-mt-16  !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat z-[999] ">
 
 <Aurora
   colorStops={["#FFFFFF", "#FFFFFF", "#FFFFFF"]}
@@ -24,7 +24,7 @@ export default function Hero2() {
   amplitude={3}
   speed={0.4}
 />
-      <div className=" max-w-[1400px] pt-16 overflow-hidden relative mx-auto flex flex-col md:flex-row justify-between px-4 w-full left-0 top-0">
+      <div className=" max-w-[1400px]  py-28 overflow-hidden relative mx-auto flex flex-col md:flex-row justify-between px-4 w-full left-0 top-0">
       {/* <div className="absolute top-10 right-0 w-2/3 h-2/3 bg-gradient-to-bl from-[#26214D] via-[#26214D]/10 to-transparent rounded-full blur-[100px] opacity-50" />
       <div className="absolute top-20 left-0 w-2/3 h-2/3 bg-gradient-to-tr from-[#26214D] via-[#26214D]/10 to-transparent rounded-full blur-[100px] opacity-50" />
       <div className="absolute bottom-0 left-0 w-2/3 h-2/3 bg-gradient-to-tr from-[#26214D] via-[#26214D]/10 to-transparent rounded-full blur-[100px] opacity-40" /> */}

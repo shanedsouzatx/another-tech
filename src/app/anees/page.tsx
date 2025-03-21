@@ -148,7 +148,10 @@ export default function Anees(){
       <TechnologiesSection/>
       <Testimonials1/>
       <CountSection1/>
+      <div className="!py-32 !bg-gradient-to-b from-[#48128A]  to-[#8B3791] ">
+
 <ContactForm/>
+      </div>
       <Footer1/>
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
 </> 

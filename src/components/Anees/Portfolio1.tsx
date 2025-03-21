@@ -38,7 +38,7 @@ export default function Portfolio1(){
         <>
         
          {/* Portfolio Section*/}
-      <div className="py-12 md:py-16 -z-50  min-h-screen py-12 md:py-9 -z-50 bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
+      <div className="py-12 md:py-16 py-12 md:py-9 -z-50 bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat">
         {/* Portfolio heading */}
         <div className="max-w-6xl mx-auto px-4 md:px-8" data-aos="zoom-in">
           <h2 className="text-center text-xl md:text-5xl bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text font-bold">
