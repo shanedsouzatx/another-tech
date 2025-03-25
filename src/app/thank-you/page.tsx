@@ -3,7 +3,7 @@ import { FaCheckCircle } from "react-icons/fa";
 import { ourServices } from "@/data/services";
 import { OurServiceCard } from "@/components/OurServiceCard";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 
 const ThankYou = () => {
   return (
@@ -41,7 +41,7 @@ const ThankYou = () => {
         </div>
       </div>
     </section>
-    <Footer/>
+    <Footer1/>
     </>
   );
 };

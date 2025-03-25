@@ -1,12 +1,16 @@
 /* eslint-disable react/no-unescaped-entities */
 "use client";
 import React from "react";
-import BannerSlider from "@/components/BannerSlider";
+
+import BannerSlider1 from "@/components/Anees/BannerSlider1"; 
+
 import { contactHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
+import ContactForm from "@/components/Anees/ContactForm";
+import Location from "@/components/Location/Location";
+import Footer1 from "@/components/Services/Footer/Footer1";
 function Contact() {
   return (
     <>
@@ -24,10 +28,15 @@ function Contact() {
       />
       {/* Slider */}
       <div className="mb-20">
-        <BannerSlider />
+        <BannerSlider1 />
       </div>
     </section>
-    <Footer/>
+    <div className="!pb-11 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50  ">
+
+<ContactForm/>
+<Location/>
+      </div>
+    <Footer1/>
     </>
   );
 }

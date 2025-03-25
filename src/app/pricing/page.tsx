@@ -5,9 +5,9 @@ import  Testimonials4  from "@/components/Testimonials/Testimonials4";
 import { pricesHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
-import PricingSection from "@/components/PricingSection";
+import Pricing1 from "@/components/Anees/Pricing1";
 import Navbar2 from "@/components/Anees/Navbar2";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 import React, { useState } from "react";
 
 import ContactForm from "@/components/Anees/ContactForm";
@@ -32,12 +32,12 @@ function Prices() {
             this fast-paced businessworld, we deliver customer experience with
             smart services to meet the needs of the customers."
         bgImgSrc={pricesHeroImgSrc}
-        backDropShadow="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"
+        backDropShadow="linear-gradient(rgba(49, 49, 49, 0.5), rgba(102, 100, 100, 0.5))"
         textColor="text-black"
       />
       <BannerSlider1/>
       {/* Pricing Section */}
-      <PricingSection />
+      <Pricing1 />
    {/* TEXT IMAGE SECTION 1*/}
    <div className="w-full px-4 my-16 md:px-6 ">
         <div className="max-w-6xl mx-auto flex flex-wrap md:flex-nowrap items-center">
@@ -98,7 +98,7 @@ function Prices() {
 <ContactForm/>
 <Location/>
       </div>
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );

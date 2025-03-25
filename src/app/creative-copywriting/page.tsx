@@ -16,7 +16,6 @@ import { OurServiceCard } from "@/components/OurServiceCard";
 import { closeModal, openModal } from "../utils/HelperFunction";
 import Modal from "@/components/Modal/Modal";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 
 const CreativeCopywriting = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -437,7 +436,6 @@ const CreativeCopywriting = () => {
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
     </section>
     </>
   );

@@ -23,7 +23,6 @@ import { closeModal, openModal } from "../utils/HelperFunction";
 import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
 import Navbar2 from "@/components/Anees/Navbar2";
-import Footer from "@/components/Footer";
 import Portfolio1 from "@/components/Anees/Portfolio1";
 import ContactForm from "@/components/Anees/ContactForm";
 import Footer1 from "@/components/Services/Footer/Footer1";
