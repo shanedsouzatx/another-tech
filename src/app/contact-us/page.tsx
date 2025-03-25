@@ -17,7 +17,7 @@ function Contact() {
     <section>
       {/* Hero Section */}
       <HeroSection
-        heading={`Phenomenal Website Design and <br/> Development Services`}
+        heading={``}
         subHeading="Contact Us"
         para="We provide complete web development solutions for your business. Our
             websites showcase dexterity, agility, exclusivity and quality."

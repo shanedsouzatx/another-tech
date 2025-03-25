@@ -28,7 +28,8 @@ function AboutUs() {
     <section>
       {/* Hero Section */}
       <HeroSection
-        heading={`We Are Your Digital <br/> Growth Partner`}
+        subHeading={`About Us`}
+        heading=""
         para="At Tech Craft, we believe that business growth is linked with digital technology as it revamps and innovates businesses in wonderful ways. Founded on innovation, integrity, and inclusivity principles, our mission goes beyond delivering exceptional digital solutions. Let’s build the digital experiences that truly matter."
         bgImgSrc={aboutHeroImgSrc}
         backDropShadow="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))"

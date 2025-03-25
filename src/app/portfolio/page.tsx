@@ -67,7 +67,7 @@ function Portfolio() {
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <div className="!py-32 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50   ">
+      <div className="!py-9 -mt-5 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50   ">
         <ContactForm />
       </div>
 

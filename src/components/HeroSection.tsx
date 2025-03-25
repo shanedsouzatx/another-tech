@@ -45,7 +45,7 @@ const HeroSection = ({
         <h2
           className={`text-3xl md:text-7xl ${
             textColor ?? textColor
-          } lg:text-5xl font-medium ${subHeading ? "my-4" : "mb-4"}`}
+          } !font-extrabold  bg-gradient-to-b from-white via-white to-white/70 text-transparent bg-clip-text ${subHeading ? "my-4" : "mb-4"}`}
         >
           {_heading ? (
             <>

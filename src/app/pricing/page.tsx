@@ -33,7 +33,7 @@ function Prices() {
             smart services to meet the needs of the customers."
         bgImgSrc={pricesHeroImgSrc}
         backDropShadow="linear-gradient(rgba(49, 49, 49, 0.5), rgba(102, 100, 100, 0.5))"
-        textColor="text-black"
+        textColor="text-white"
       />
       <BannerSlider1/>
       {/* Pricing Section */}
