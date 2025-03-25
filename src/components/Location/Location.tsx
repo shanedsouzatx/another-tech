@@ -35,7 +35,7 @@ const locations = [
 
 export default function Location() {
   return (
-    <div className="bg-gradient-to-r from-[#DCA6E4] via-[#D9A4E3]/70 to-[#282353]/60 text-black py-12 px-6">
+    <div className=" bg-gradient-to-b from-[#48128A]  to-[#8B3791]   text-white py-12 px-6">
     <div className="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 text-center">
       {locations.map((loc, index) => (
         <div 
@@ -48,12 +48,12 @@ export default function Location() {
               alt={loc.country} 
               width={50} 
               height={50} 
-              className="h-full z-[999] w-auto object-cover transition-all duration-300 brightness-50 hover:brightness-150 hover:scale-110"
+              className="h-full z-[999] w-auto object-cover transition-all duration-300 hover:brightness-150 hover:scale-110"
             />
           </div>
           <hr className="w-16 border-gray-500 my-4 transition-all duration-300 hover:border-white" />
-          <h3 className="text-lg font-semibold">{loc.country}</h3>
-          <p className="text-gray-900 text-sm">{loc.address}</p>
+          <h3 className="text-lg text-white font-semibold">{loc.country}</h3>
+          <p className="text-gray-100 text-sm">{loc.address}</p>
         </div>
       ))}
     </div>

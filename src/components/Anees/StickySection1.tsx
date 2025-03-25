@@ -150,8 +150,8 @@ export default function StickySection1() {
     <section className="relative bg-gradient-to-b from-[#48128A] to-[#8B3791] text-white overflow-hidden">
       <div className="container mx-auto flex flex-col lg:flex-row min-h-screen">
         {/* Left sticky section */}
-        <div className="lg:sticky lg:top-0 lg:h-screen lg:w-1/2 flex flex-col justify-center p-8">
-          <div className="max-w-xl">
+        <div className="lg:sticky lg:top-0 lg:h-screen lg:w-1/2 flex flex-col justify-center ">
+          {/* <div className="max-w-xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-6">
               POWER YOUR BUSINESS GROWTH WITH AN OPTIMIZED WEBSITE
             </h2>
@@ -160,7 +160,19 @@ export default function StickySection1() {
               delivering client satisfaction through innovative design and development. We guarantee results that
               showcase our technical expertise and creativity in website design.
             </p>
-          </div>
+          </div> */}
+           <div
+          className="w-full md:pl-7 block"
+        >
+          <video
+            src="/services/gif2.mp4"
+            className="w-[500px] object-contain h-[500px] "
+            autoPlay
+            loop
+            muted
+            playsInline
+          />
+        </div>
         </div>
 
         {/* Right scrollable section */}

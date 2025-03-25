@@ -13,8 +13,8 @@ const CountSection = () => {
     >
       <div className="max-w-6xl mx-auto py-10">
         <div className="px-4 md:px-0" data-aos="zoom-in">
-          <h2 className="text-2xl text-[#5114AE] font-medium md:font-semibold mb-3">
-            Budget-Friendly Prices
+          <h2 className="text-2xl  font-semibold  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text uppercase font-medium md:font-semibold mb-3">
+            BUDGET FRIENDLY PRICES 
           </h2>
           <h2 className="text-xl md:text-4xl font-bold md:font-semibold">
             Get Top-Notch Services At

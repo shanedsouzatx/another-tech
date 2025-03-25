@@ -328,14 +328,8 @@ class Media {
   }
 
   createTitle() {
-    this.title = new Title({
-      gl: this.gl,
-      plane: this.plane,
-      renderer: this.renderer,
-      text: this.text,
-      textColor: this.textColor,
-      font: this.font,
-    });
+    // Remove title creation
+    return;
   }
 
   update(
@@ -508,27 +502,27 @@ class App {
   ) {
     const defaultItems = [
       {
-        image: `/services/gal1.jpg`,
+        image: `https://res.cloudinary.com/dhggagqst/image/upload/v1742840744/unique-content-writershort-time-delivery_qkcimx.webp`,
         text: "doctor",
       },
       {
-        image: `/services/gal2.jpg`,
+        image: `https://res.cloudinary.com/dhggagqst/image/upload/v1742840744/eg-blog2_ufw5bt.jpg`,
         text: "Metaverse",
       },
       {
-        image: `/services/gal3.jpg`,
+        image: `https://res.cloudinary.com/dhggagqst/image/upload/v1742840743/write-content-or-research-article-for-you_cb8vfm.webp`,
         text: "Bitcoin",
       },
       {
-        image: `/services/gal4.png`,
+        image: `https://res.cloudinary.com/dhggagqst/image/upload/v1742840743/be-your-seo-website-content-writer-and-article-writer_t7ukgz.webp`,
         text: "World",
       },
       {
-        image: `/services/gal5.avif`,
+        image: `https://res.cloudinary.com/dhggagqst/image/upload/v1742840743/write-seo-articles-blog-post-and-website-content_dpiywl.webp`,
         text: "Fitness",
       },
       {
-        image: `/services/gal7.jpg`,
+        image: `https://res.cloudinary.com/dhggagqst/image/upload/v1742840743/write-articles-website-content-product-description-blogs_fsykfd.webp`,
         text: "Jacket",
       },
       
@@ -692,16 +686,15 @@ export default function CircularGallery({
   }, [items, bend, textColor, borderRadius, font]);
   return (
     <div className="bg-gradient-to-b from-[#48128A]  to-[#8B3791]">
-     <div  className="text-center  md:text-left">
-        <h2 className="bg-gradient-to-b from-white via-white to-[#BCBEC0]/70   text-transparent bg-clip-text text-4xl md:text-6xl font-bold pt-7 uppercase text-center" >
-        A Vision That Moves.
+      <div className="text-center md:text-left">
+        <h2 className="bg-gradient-to-b from-white via-white to-[#BCBEC0]/70 text-transparent bg-clip-text text-4xl md:text-6xl font-bold pt-7 uppercase text-center">
+          A Vision That Moves.
         </h2>
-        <p className="text-center  text-sm md:text-base text-white ">
-        Seamlessly blending creativity and technology, our solutions are built to inspire. Let’s create something extraordinary.
+        <p className="text-center text-sm md:text-base text-white">
+      Unlock the perfect blend of creativity and strategy with our expertly crafted content. We transform ideas into impactful words that engage, inspire, and drive results. Let’s bring your brand’s story to life.
         </p>
       </div>
-  <div className="circular-gallery min-h-[50vh] " ref={containerRef} />
-  </div>
-
-  )
+      <div className="circular-gallery min-h-[50vh]" ref={containerRef} />
+    </div>
+  );
 }

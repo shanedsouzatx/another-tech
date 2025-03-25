@@ -12,6 +12,7 @@ const BannerSlider1 = ({ isMargin }: { isMargin?: boolean }) => {
   ];
 
   const [isHovered, setIsHovered] = useState(false);
+  const [currentX, setCurrentX] = useState(0);
 
   return (
     <div
@@ -26,11 +27,18 @@ const BannerSlider1 = ({ isMargin }: { isMargin?: boolean }) => {
         <motion.div
           className="flex space-x-10"
           initial={{ x: 0 }}
-          animate={{ x: [0, -imageSrcs.length * 200] }}
+          animate={{ 
+            x: isHovered 
+              ? currentX 
+              : [currentX, -imageSrcs.length * 200]
+          }}
+          onUpdate={(latest) => {
+            setCurrentX(latest.x as number);
+          }}
           transition={{
             repeat: Infinity,
             repeatType: "loop",
-            duration: isHovered ? 10 : 25,
+            duration: 10, // Changed from 30 to 15 for faster movement
             ease: "linear",
           }}
         >

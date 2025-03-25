@@ -3,11 +3,11 @@ const ctaImgSrc =
 const bannerPerce =
   "https://res.cloudinary.com/dautl8x6a/image/upload/v1719975386/banner-perce_lhhg5h.png";
 const portfoilioBgImgSrc =
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1724887941/portfolio-img_ajhijt.jpg";
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742918289/new_portfolio._ouxyuy.jpg";
 const pricesHeroImgSrc =
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1724887942/pricing-img_siyrws.jpg";
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742924724/image_2025_03_25T17_44_55_433Z_qlspap.png";
 const aboutHeroImgSrc =
-  "https://res.cloudinary.com/dautl8x6a/image/upload/v1725307441/premium_photo-1661281350976-59b9514e5364_huiwek.jpg";
+  "https://res.cloudinary.com/dhggagqst/image/upload/v1742918944/549_kevwlo.jpg";
 const contactHeroImgSrc =
   "https://res.cloudinary.com/dautl8x6a/image/upload/v1724887941/contact-img_jmq3zc.jpg";
 const heroBgImgSrc =

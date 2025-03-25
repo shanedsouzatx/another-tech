@@ -8,44 +8,44 @@ export default function Experties() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const industries = [
     {
-      icon: "🖥️",
-      title: "Custom Software Development",
-      description: "Crafting scalable, high-performance software solutions tailored to business needs, ensuring seamless functionality and future-ready architecture.",
+      icon: "📝",
+      title: "SEO Content Writing",
+      description: "Crafting high-quality, search-optimized content that boosts rankings, drives traffic, and engages your audience.",
     },
     {
-      icon: "📱",
-      title: "Mobile App Development",
-      description: "Building next-gen mobile applications with cutting-edge technologies, optimized for performance, security, and an exceptional user experience.",
+      icon: "📖",
+      title: "Blog & Article Writing",
+      description: "Creating informative, compelling, and well-researched articles that establish authority and keep readers engaged.",
     },
     {
-      icon: "☁️",
-      title: "Cloud Solutions & DevOps",
-      description: "Enabling businesses to scale with cloud-native applications, infrastructure automation, and DevOps-driven deployment strategies.",
+      icon: "🛒",
+      title: "E-Commerce Copywriting",
+      description: "Writing persuasive product descriptions, category pages, and sales copy to enhance conversions and customer engagement.",
     },
     {
-      icon: "🤖",
-      title: "AI & Machine Learning",
-      description: "Integrating AI-driven automation and machine learning models to enhance decision-making, personalization, and operational efficiency.",
+      icon: "🏢",
+      title: "B2B & Technical Writing",
+      description: "Developing in-depth whitepapers, case studies, and technical documentation that communicate complex ideas clearly.",
     },
     {
-      icon: "🛍️",
-      title: "E-Commerce Solutions",
-      description: "Developing feature-rich, AI-powered e-commerce platforms that drive engagement, sales, and seamless user experiences.",
+      icon: "🎨",
+      title: "Brand Storytelling",
+      description: "Building a compelling brand voice with engaging narratives that connect with your audience emotionally.",
     },
     {
-      icon: "🔐",
-      title: "Cybersecurity & Compliance",
-      description: "Implementing advanced security protocols to protect digital assets, ensuring compliance with industry standards and regulations.",
+      icon: "✉️",
+      title: "Email & Social Media Copy",
+      description: "Crafting persuasive emails, ads, and social media posts designed to drive engagement and conversions.",
     },
     {
-      icon: "🎮",
-      title: "Game Development",
-      description: "Creating immersive gaming experiences with real-time multiplayer support, stunning graphics, and engaging gameplay mechanics.",
+      icon: "📑",
+      title: "Landing Page & Web Copy",
+      description: "Writing conversion-focused website copy that highlights your value proposition and improves user experience.",
     },
     {
-      icon: "📡",
-      title: "IoT & Smart Technology",
-      description: "Designing and deploying IoT solutions that enhance connectivity, automation, and real-time data analysis across industries.",
+      icon: "🔍",
+      title: "Content Strategy & Editing",
+      description: "Refining content structure, tone, and SEO strategy to ensure clarity, impact, and maximum reach.",
     },
   ];
   

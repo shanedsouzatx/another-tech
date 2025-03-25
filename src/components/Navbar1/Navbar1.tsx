@@ -258,7 +258,7 @@ export default function Navbar1() {
 function MegaMenu() {
   return (
     <div className="w-full bg-white/95 backdrop-blur-md shadow-2xl border-b border-purple-100 overflow-hidden">
-      <div className="relative max-w-[1920px] mx-auto">
+      <div className="relative max-w-[1990px] mx-auto">
         {/* Gradient backgrounds */}
         <div
           className="absolute top-0 right-0 w-2/3 h-2/3 bg-gradient-to-bl from-[#9D4973] via-[#DCA6E4]/10 to-[#282353] rounded-full blur-[100px] opacity-50 animate-pulse"
@@ -286,7 +286,7 @@ function MegaMenu() {
           style={{ animationDuration: "12s" }}
         />
         <div className="container mx-auto py-8">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-3 px- ">
             {/* Featured Section */}
             {/* <div className="md:col-span-1">
               <motion.div
@@ -330,11 +330,10 @@ function MegaMenu() {
                 title="Writing"
                 links={[
                   { href: "/services/website-content-writing", label: "Website Content Writing" },
-                  { href: "/services/logo-designing", label: "SEO Blog Writing" },
-                  { href: "/services/web-designing", label: "CopyWriting " },
-                  { href: "/services/3d-graphic-designing", label: "3D Graphic Designing" },
-                  { href: "/services/event-social-media-design", label: "Event and Social Media Design" },
-                  { href: "/services/logo-animation", label: "Logo Animation" },
+                  { href: "/services/seo-blog-writing", label: "SEO Blog Writing" },
+                  { href: "/services/script-writing", label: "Script Writing" },
+                  { href: "/services/copywriting", label: "CopyWriting " },
+                  { href: "/services/article-writing", label: "Article Writing" },
                 ]}
               />
             </motion.div>
@@ -391,6 +390,7 @@ function MegaMenu() {
                   { href: "/services/3d-animation", label: "3D Animation" },
                   { href: "/services/2d-animation", label: "2D Animation" },
                   { href: "/services/explainer-videos", label: "Explainer videos" },
+                  { href: "/services/white-board", label: "White Board" },
                   { href: "/services/cgi-animation", label: "CGI animation" },
                   { href: "/services/video-editing", label: "Video Editing" },
                 ]}

@@ -218,35 +218,35 @@ export default function TechStackShowcase() {
         onValueChange={(value) => setActiveTab(value as TabKey)}
         className="w-full"
       >
-        <div className="flex justify-center mb-4 ">
-          <TabsList className="grid grid-cols-5 w-full max-w-3xl">
+        <div className="flex justify-center mb-4 overflow-y-hidden overflow-x-auto">
+          <TabsList className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2 w-full max-w-3xl p-1">
             <TabsTrigger
               value="seo"
-              className="text-lg font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
+              className="text-sm md:text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791] data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] whitespace-nowrap px-2"
             >
               SEO
             </TabsTrigger>
             <TabsTrigger
               value="blogging"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
+              className="text-sm md:text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791] data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] whitespace-nowrap px-2"
             >
               Blogging
             </TabsTrigger>
             <TabsTrigger
               value="ecommerce"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
+              className="text-sm md:text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791] data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] whitespace-nowrap px-2"
             >
               Ecommerce
             </TabsTrigger>
             <TabsTrigger
               value="technical"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
+              className="text-sm md:text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791] data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] whitespace-nowrap px-2"
             >
               Technical
             </TabsTrigger>
             <TabsTrigger
               value="branding"
-              className="text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791]  data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] "
+              className="text-sm md:text-base font-medium transition-all duration-300 data-[state=active]:text-[#8B3791] data-[state=active]:border-b-2 data-[state=active]:border-[#8B3791] whitespace-nowrap px-2"
             >
               Branding
             </TabsTrigger>

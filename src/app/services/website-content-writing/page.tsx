@@ -7,6 +7,7 @@ import TechStackShowcase from "@/components/Services/TechStackShowcase/TechStack
 import Feature from "@/components/Services/Feature/Feature";
 import Footer1 from "@/components/Services/Footer/Footer1";
 import ContactForm from "@/components/Anees/ContactForm";
+import Location from "@/components/Location/Location";
 
 
 import NewsLetter from "@/components/Services/NewsLetter/NewsLetter";
@@ -37,18 +38,18 @@ export default function Home() {
       {/* <div style={{ height: "300px", position: "relative" }}> */}
         <CircularGallery bend={3} textColor="black" borderRadius={0.05} />
       {/* </div> */}
-      <Feature/>
+      {/* <Feature/> */}
       {/* <Pricing1/> */}
-      <Experties/>
       <NewsLetter/>
-      <StatisticsSection/>
-      <Testimonials1 />
+      <Experties/>
+      {/* <StatisticsSection/> */}
       <Accordian/>
-      <div className="!py-32 !bg-gradient-to-b from-[#48128A]  to-[#8B3791] ">
+      <Testimonials1 />
+      <div className="!py-32 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50   ">
 
 <ContactForm/>
       </div>
-
+<Location/>
       <Footer1/>
     </>
   );

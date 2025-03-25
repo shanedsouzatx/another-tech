@@ -12,8 +12,8 @@ import {
   illustration,
 } from "@/data/porfolios";
 
-import  Testimonials4  from "@/components/Testimonials/Testimonials4";
-import BannerSlider from "@/components/BannerSlider";
+import Testimonials1 from "@/components/Anees/Testimonials1";
+import BannerSlider1 from "@/components/Anees/BannerSlider1";
 import { tabs } from "@/constants/TabsArray";
 import { portfoilioBgImgSrc } from "@/constants/CloudinaryImgUrl";
 import GradientButton from "@/components/GradientButton";
@@ -22,8 +22,12 @@ import Modal from "@/components/Modal/Modal";
 import { closeModal, openModal } from "../utils/HelperFunction";
 import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
-import Navbar1 from "@/components/Navbar1/Navbar1";
+import Navbar2 from "@/components/Anees/Navbar2";
 import Footer from "@/components/Footer";
+import Portfolio1 from "@/components/Anees/Portfolio1";
+import ContactForm from "@/components/Anees/ContactForm";
+import Footer1 from "@/components/Services/Footer/Footer1";
+import Location from "@/components/Location/Location";
 
 function Portfolio() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,7 +35,7 @@ function Portfolio() {
 
   return (
     <>
-    <Navbar1/>
+    <Navbar2/>
     <section className="w-full">
       {/* Hero Section */}
       <HeroSection
@@ -44,87 +48,9 @@ function Portfolio() {
         backDropShadow="linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5))"
       />
       {/* Slider */}
-      <BannerSlider />
-      {/* Portfolio Section*/}
-      <div className="py-16 -z-50 bg-[#F9F9F9]">
-        {/* Portfolio heading */}
-        <div className="max-w-6xl mx-auto px-4 md:px-6" data-aos="zoom-in">
-          <h5 className="text-center text-xl text-[#5114AE] font-semibold">
-            Our Outstanding Portfolio
-          </h5>
-          <h2 className="text-center font-bold text-4xl text-slate-800 my-3">
-            See it. Believe it
-          </h2>
-          <p className="text-center text-base text-[#687087] mb-8">
-            TechCraft has been extremely privileged to work with such great
-            clients and offer them quality service.
-            <br />
-            We have developed astounding layouts and interactive designs to give
-            the best user experience.
-          </p>
-        </div>
-        {/* Portfolio Filter tabs */}
-        <div
-          className="flex flex-wrap max-w-[1080px] mx-auto gap-3 mb-6 px-4 justify-center md:justify-start md:px-0 md:mb-8"
-          data-aos="zoom-in"
-        >
-          {tabs.map((tab) => (
-            <button
-              key={tab}
-              onClick={() => setActiveTab(tab)}
-              className={`relative text-sm font-semibold rounded-md cursor-pointer py-3 w-full md:w-36 border border-[#01247F] transition-colors duration-300 ${
-                activeTab === tab
-                  ? "bg-gradient-to-r from-[#5114AE] to-[#802FCE] text-white"
-                  : "text-transparent bg-clip-text bg-gradient-to-r from-[#5114AE] to-[#802FCE] bg-transparent hover:bg-gradient-to-r hover:from-[#0062EB] hover:to-[#01247F]"
-              }`}
-            >
-              {tab}
-            </button>
-          ))}
-        </div>
-
-        {/* <ScrollContainer /> */}
-        <div className="max-w-[1400px] mx-auto flex flex-wrap my-16 justify-center md:justify-between px-4 md:px-0">
-          {activeTab === "Logo Design" &&
-            logoDesign.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} />
-            ))}
-          {activeTab === "Website Design" &&
-            webDesign.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} giveHeight={true} />
-            ))}
-          {activeTab === "E-Commerce" &&
-            eCommerce.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} giveHeight={true} />
-            ))}
-          {activeTab === "Branding" &&
-            branding.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} />
-            ))}
-          {activeTab === "Mobile Apps" &&
-            mobileApps.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} />
-            ))}
-          {activeTab === "Motion Graphics" &&
-            motionGraphics.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} />
-            ))}
-          {activeTab === "Illustration" &&
-            illustration.map((imgSrc, i) => (
-              <ThreeDCardDemo key={i} imgSrc={imgSrc} />
-            ))}
-        </div>
-
-        {/* Call to Action Buttons */}
-        <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4 px-4 md:px-0">
-          <GradientButton
-            text="Let's Get Started"
-            onClick={() => openModal(setIsModalOpen)}
-          />
-          <OutlineButton text="Chat With Us" />
-        </div>
-      </div>
-
+      <BannerSlider1 />
+      
+      <Portfolio1/>
       {/* Testimonials section */}
       <div className="my-10 md:my-16">
         {/* Testimonials Heading */}
@@ -136,13 +62,18 @@ function Portfolio() {
             Testimonials
           </h4>
         </div> */}
-        <Testimonials4 />
+        <Testimonials1 />
       </div>
       {/* Projects Count */}
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <div className="!py-32 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50   ">
+        <ContactForm />
+      </div>
+
+      <Location />
+      <Footer1 />
     </section>
     </>
   );

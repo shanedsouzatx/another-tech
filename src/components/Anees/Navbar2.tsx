@@ -17,6 +17,7 @@ export default function Navbar2() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false) // New state for mobile services
   const menuRef = useRef<HTMLDivElement>(null)
   const timeoutRef = useRef<NodeJS.Timeout>()
   const pathname = usePathname()
@@ -204,20 +205,21 @@ export default function Navbar2() {
                 <div className="space-y-2">
                   <button
                     className="flex items-center justify-between w-full text-lg font-medium hover:text-[#7E43C7]"
-                    onClick={() => setIsServicesOpen(!isServicesOpen)}
+                    onClick={() => setMobileServicesOpen(!mobileServicesOpen)} // Changed to use the new state
                   >
                     <span>Services</span>
-                    <motion.div animate={{ rotate: isServicesOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
+                    <motion.div animate={{ rotate: mobileServicesOpen ? 180 : 0 }} transition={{ duration: 0.3 }}>
                       <ChevronDown className="h-5 w-5" />
                     </motion.div>
                   </button>
                   <AnimatePresence>
-                    {isServicesOpen && (
+                    {mobileServicesOpen && ( // Changed to use the new state
                       <motion.div
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
                         transition={{ duration: 0.3 }}
+                        className="max-h-[50vh] overflow-y-auto pb-2" // Added max height and scroll
                       >
                         <MobileMenu />
                       </motion.div>
@@ -288,7 +290,7 @@ function MegaMenu() {
           style={{ animationDuration: "12s" }}
         /> */}
         <div className="container mx-auto py-8">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-5 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 px-4">
             {/* Featured Section */}
             {/* <div className="md:col-span-1">
               <motion.div
@@ -323,7 +325,7 @@ function MegaMenu() {
               </motion.div>
             </div> */}
   <motion.div
-              className="md:col-span-1"
+              className="md:col-span-1 space-y-3 "
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
@@ -332,11 +334,10 @@ function MegaMenu() {
                 title="Writing"
                 links={[
                   { href: "/services/website-content-writing", label: "Website Content Writing" },
-                  { href: "/services/logo-designing", label: "SEO Blog Writing" },
-                  { href: "/services/web-designing", label: "CopyWriting " },
-                  { href: "/services/3d-graphic-designing", label: "3D Graphic Designing" },
-                  { href: "/services/event-social-media-design", label: "Event and Social Media Design" },
-                  { href: "/services/logo-animation", label: "Logo Animation" },
+                  { href: "/services/seo-blog-writing", label: "SEO Blog Writing" },
+                  { href: "/services/script-writing", label: "Script Writing" },
+                  { href: "/services/copy-writing", label: "CopyWriting " },
+                  { href: "/services/article-writing", label: "Article Writing" },
                 ]}
               />
             </motion.div>
@@ -356,7 +357,7 @@ function MegaMenu() {
                   { href: "/services/logo-designing", label: "Logo Designing" },
                   { href: "/services/web-designing", label: "Web Designing" },
                   { href: "/services/3d-graphic-designing", label: "3D Graphic Designing" },
-                  { href: "/services/event-social-media-design", label: "Event and Social Media Design" },
+                  { href: "/services/events-and-social-media-design", label: "Event and Social Media Design" },
                   { href: "/services/logo-animation", label: "Logo Animation" },
                 ]}
               />
@@ -393,6 +394,7 @@ function MegaMenu() {
                   { href: "/services/3d-animation", label: "3D Animation" },
                   { href: "/services/2d-animation", label: "2D Animation" },
                   { href: "/services/explainer-videos", label: "Explainer videos" },
+                  { href: "/services/white-board", label: "White Board" },
                   { href: "/services/cgi-animation", label: "CGI animation" },
                   { href: "/services/video-editing", label: "Video Editing" },
                 ]}
@@ -445,6 +447,8 @@ function ServiceCategory({ title, links }: { title: string; links: { href: strin
 }
 
 function MobileMenu() {
+  const [expandedCategory, setExpandedCategory] = useState<string | null>(null)
+  
   const serviceCategories = [
     {
       title: "Graphic Designing",
@@ -489,27 +493,50 @@ function MobileMenu() {
   ]
 
   return (
-    <div className="space-y-6 pl-4 py-2">
+    <div className="space-y-4 pl-4 py-2">
       {serviceCategories.map((category, categoryIndex) => (
         <motion.div
           key={category.title}
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.3, delay: categoryIndex * 0.1 }}
+          className="border-b border-gray-100 pb-2"
         >
-          <ServiceHeading title={category.title} size="small" />
-          <ul className="space-y-2 mt-2">
-            {category.links.map((link, linkIndex) => (
-              <motion.div
-                key={link.href}
-                initial={{ opacity: 0, x: -10 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: categoryIndex * 0.1 + linkIndex * 0.05 }}
+          <button 
+            className="flex items-center justify-between w-full py-2"
+            onClick={() => setExpandedCategory(expandedCategory === category.title ? null : category.title)}
+          >
+            <ServiceHeading title={category.title} size="small" />
+            <motion.div 
+              animate={{ rotate: expandedCategory === category.title ? 180 : 0 }}
+              transition={{ duration: 0.3 }}
+            >
+              <ChevronDown className="h-4 w-4 text-[#7E43C7]" />
+            </motion.div>
+          </button>
+          
+          <AnimatePresence>
+            {expandedCategory === category.title && (
+              <motion.ul 
+                className="space-y-2 mt-2 ml-4"
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: "auto" }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.3 }}
               >
-                <ServiceLink href={link.href} label={link.label} />
-              </motion.div>
-            ))}
-          </ul>
+                {category.links.map((link, linkIndex) => (
+                  <motion.div
+                    key={link.href}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.2, delay: linkIndex * 0.05 }}
+                  >
+                    <ServiceLink href={link.href} label={link.label} />
+                  </motion.div>
+                ))}
+              </motion.ul>
+            )}
+          </AnimatePresence>
         </motion.div>
       ))}
     </div>

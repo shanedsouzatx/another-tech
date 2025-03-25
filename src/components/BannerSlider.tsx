@@ -26,11 +26,11 @@ const BannerSlider = ({ isMargin }: { isMargin?: boolean }) => {
         <motion.div
           className="flex space-x-10"
           initial={{ x: 0 }}
-          animate={{ x: [0, -imageSrcs.length * 200] }}
+          animate={{ x: isHovered ? undefined : [0, -imageSrcs.length * 200] }}
           transition={{
             repeat: Infinity,
             repeatType: "loop",
-            duration: isHovered ? 10 : 25,
+            duration: 25,
             ease: "linear",
           }}
         >

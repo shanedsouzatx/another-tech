@@ -2,7 +2,7 @@
 "use client";
 import React, { useState } from "react";
 import BannerSlider from "@/components/BannerSlider";
-import { Testimonials } from "@/components/Testimonials";
+
 import { aboutHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import Image from "next/image";
 import GradientButton from "@/components/GradientButton";
@@ -13,15 +13,18 @@ import CountSection from "@/components/CountSection";
 import HeroSection from "@/components/HeroSection";
 import { OurServiceCard } from "@/components/OurServiceCard";
 import { aboutServices } from "@/data/services";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Navbar2 from "@/components/Anees/Navbar2";
+import BannerSlider1 from "@/components/Anees/BannerSlider1"; 
 
-import  Testimonials4  from "@/components/Testimonials/Testimonials4";
+import Testimonials1 from "@/components/Anees/Testimonials1";
+import Footer1 from "@/components/Services/Footer/Footer1";
+import ContactForm from "@/components/Anees/ContactForm";
+import Location from "@/components/Location/Location";
 function AboutUs() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <>
-    <Navbar/>
+    <Navbar2/>
     <section>
       {/* Hero Section */}
       <HeroSection
@@ -33,14 +36,14 @@ function AboutUs() {
       />
 
       {/* Slider */}
-      <BannerSlider />
+      <BannerSlider1 />
       {/* TEXT IMAGE SECTION 1*/}
-      <div className="w-full px-4 my-16 md:px-6">
+      <div className="w-full px-4 my-16 md:px-6 ">
         <div className="max-w-6xl mx-auto flex flex-wrap md:flex-nowrap items-center">
           {/* Text Content */}
           <div className="w-full md:w-1/2 mb-8 md:mb-0">
-            <h2 className="text-3xl text-[#33174E] font-extrabold">
-              A Dedicated Team Eager To Help <br /> You Lead
+            <h2 className="text-3xl text-xl md:text-4xl bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text font-bold">
+              A Dedicated Team Eager To Help You Lead
             </h2>
             <p className="text-sm text-gray-500 my-4 md:text-base">
               Our strength lies in our people—a diverse group of creative
@@ -74,6 +77,32 @@ function AboutUs() {
         </div>
       </div>
 
+      {/* Result Oriented Section */}
+      <div className="px-4 py-16 md:px-6 bg-gradient-to-b from-[#48128A]  to-[#8B3791] ">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl bg-gradient-to-b from-white via-white to-[#BCBEC0]/70   text-transparent bg-clip-text text-3xl md:text-5xl font-bold uppercasefont-bold text-center">
+            We are Results-Oriented Agency
+          </h2>
+          <p className="text-sm text-white mt-4 text-center md:text-base">
+            We put strategy first so that you can see actual results. TechCraft
+            is a well-known specialist that works for clients in a variety of
+            industries including e-commerce, healthcare, education, and so on.
+            Our experts are result-oriented. We also have vast experience in
+            website design & development. We make sure that our web marketing
+            initiatives support long-term success for our clients in addition to
+            generating new revenue for them. The services that we provide:
+          </p>
+
+          {/* Card Section */}
+          <div className="flex flex-wrap md:justify-between text-black">
+            {/* Card Section */}
+            {aboutServices.map((el, idx) => (
+              <OurServiceCard {...el} key={idx} />
+            ))}
+          </div>
+        </div>
+      </div>
+
       {/* TEXT IMAGE SECTION 2*/}
       <div className="w-full px-4 my-16 md:px-6">
         <div className="max-w-6xl mx-auto flex flex-wrap md:flex-nowrap items-center">
@@ -91,8 +120,8 @@ function AboutUs() {
 
           {/* Text Content */}
           <div className="w-full md:w-1/2">
-            <h2 className="text-3xl text-[#33174E] font-extrabold">
-              Our Commitment to Your <br /> Success
+            <h2 className="text-3xl text-xl md:text-4xl bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text font-bold">
+              Our Commitment to Your Success
             </h2>
             <p className="text-sm text-gray-500 my-4 md:text-base">
               Your success is at the heart of everything we do. We’re not just
@@ -115,32 +144,6 @@ function AboutUs() {
         </div>
       </div>
 
-      {/* Result Oriented Section */}
-      <div className="px-4 my-16 md:px-6">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-3xl text-[#5114AE] font-bold text-center">
-            We are Results-Oriented Agency
-          </h2>
-          <p className="text-sm text-gray-500 mt-4 text-center md:text-base">
-            We put strategy first so that you can see actual results. TechCraft
-            is a well-known specialist that works for clients in a variety of
-            industries including e-commerce, healthcare, education, and so on.
-            Our experts are result-oriented. We also have vast experience in
-            website design & development. We make sure that our web marketing
-            initiatives support long-term success for our clients in addition to
-            generating new revenue for them. The services that we provide:
-          </p>
-
-          {/* Card Section */}
-          <div className="flex flex-wrap md:justify-between">
-            {/* Card Section */}
-            {aboutServices.map((el, idx) => (
-              <OurServiceCard {...el} key={idx} />
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Testimonials section */}
       <div className="my-0 md:my-16">
         {/* Testimonials Heading */}
@@ -153,13 +156,17 @@ function AboutUs() {
           </h4>
         </div>
         <Testimonials /> */}
-    <Testimonials4/>
+    <Testimonials1/>
       </div>
       {/* Projects Count */}
       <CountSection />
+      <div className="!pb-11 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50  ">
 
+<ContactForm/>
+<Location/>
+      </div>
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );

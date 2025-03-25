@@ -16,53 +16,52 @@ const Accordioninner = () => {
     <div className="max-w-6xl mx-auto py-9 px-4 md:px-0  ">
       {/* Text Section */}
       <div data-aos="zoom-in" className="text-center md:text-left">
-        <h2 className="text-2xl md:text-5xl text-center  font-bold bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text mb-4">
-          GIVE YOUR BUSINESS A DIGITAL BOOST
-        </h2>
-        <p className="text-center  text-sm md:text-base text-[#687087]">
-          The digital marketing competition is very high. Without a
-          professional digital marketing agency, it would be very complicated
-          for you to survive and grow your business. A website alone doesn’t
-          guarantee visibility unless search engines recognize it. Tech Craft
-          specializes in amplifying the digital presence of any business
-          through targeted website design, compelling copywriting, strategic
-          keyword integration, and active social media engagement to ensure your
-          site is easily discoverable by the intended audience. We guarantee
-          that partnering with Tech Craft will optimize your marketing
-          investment for the highest returns.
-        </p>
-      </div>
+  <h2 className="text-2xl md:text-5xl text-center font-bold bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text mb-4">
+    POWERFUL WEBSITE CONTENT THAT ENGAGES & CONVERTS
+  </h2>
+  <p className="text-center text-sm md:text-base text-[#687087]">
+    Your website is your digital storefront, and compelling content is the key to turning visitors into customers.  
+    At Tech Craft, we craft engaging, SEO-friendly website copy that enhances your brand voice, improves search rankings, and keeps your audience engaged.  
+    From service pages to landing pages, we ensure every word resonates with your target audience and drives action.  
+    Let us help you create content that not only informs but also persuades and converts.
+  </p>
+</div>
 
       {/* Accordion Section */}
       <div className="" data-aos="zoom-in">
         <h2 className="text-xl text-center md:text-2xl font-semibold text-[#333] my-6 md:my-8">
          
-          GET ULTIMATE BENEFITS BY CHOOSING TECH CRAFT AS YOU DIGITAL MARKETING CONSULTANT
+          GET ULTIMATE BENEFITS BY CHOOSING TECH CRAFT AS YOUR WEBSITE CONTENT WRITER 
         </h2>
 
         {/* Panel Template */}
         {[
-          {
-            id: "accordion-panel-1",
-            title: "Dedication to Your Success",
-            content: `Our mission at Tech Craft is to contribute to your business’s growth. We see your success as our victory, fostering a relationship where you receive outstanding customer service aligned with your goals. We encourage continuous dialogue and provide access to a team that’s working for you and with you, offering reliable, expert advice to ensure your satisfaction.`,
-          },
-          {
-            id: "accordion-panel-2",
-            title: "Tailored Digital Marketing Strategies",
-            content: `With Tech Craft, you’re not just getting a service but investing in a partnership that promises to develop and implement digital marketing strategies specifically designed for your business’s long-term goals. Our strategies are result-driven, highly impactful, customized to your industry, and easily measurable. After all, we need to ensure that your marketing efforts are targeted and effective.`,
-          },
-          {
-            id: "accordion-panel-3",
-            title: "Focus on Growing Your Business",
-            content: `Leveraging our digital marketing expertise allows you to shed the marketing weight off your shoulders. This means you can concentrate more on what you do best — running your business. While we handle the digital front, you’ll gain insights into performance metrics and areas for improvement, guided by our comprehensive support.`,
-          },
-          {
-            id: "accordion-panel-4",
-            title: "Results-Driven Approach",
-            content: `There’s no point in sticking with strategies that don’t deliver. Tech Craft listens to your needs and objectives, crafting and executing plans that align with your business’s goals. Our focus is clear: to strengthen your brand’s visibility, recognition, growth, and development. We utilize SEO and other innovative digital tools and techniques approved by Google’s algorithms to ensure your business gets higher search results and intended audience that can easily convert into sales.`,
-          },
-        ].map((panel) => (
+  {
+    id: "accordion-panel-1",
+    title: "How Does High-Quality Website Content Benefit My Business?",
+    content: `Well-crafted website content not only informs and engages visitors but also builds trust and credibility. Our expert writers ensure that your content aligns with your brand voice, improves user experience, and enhances SEO to attract more organic traffic.`,
+  },
+  {
+    id: "accordion-panel-2",
+    title: "Do You Optimize Content for SEO?",
+    content: `Yes! We incorporate strategic keyword placement, optimize meta descriptions, and structure content for readability to ensure search engines rank your website higher. Our content is designed to drive traffic while maintaining a natural, engaging flow for readers.`,
+  },
+  {
+    id: "accordion-panel-3",
+    title: "Can You Help with Brand Messaging and Tone?",
+    content: `Absolutely! We tailor your content to match your brand’s unique voice and personality. Whether you need a professional, informative tone or a friendly, conversational approach, we ensure consistency across all pages for a strong brand presence.`,
+  },
+  {
+    id: "accordion-panel-4",
+    title: "What Types of Website Content Do You Write?",
+    content: `We specialize in homepages, service pages, landing pages, about us pages, FAQs, blog posts, and more. Each piece is designed to engage users, provide value, and encourage conversions.`,
+  },
+  {
+    id: "accordion-panel-5",
+    title: "How Do You Ensure Content Drives Conversions?",
+    content: `We craft persuasive and action-driven content that guides visitors through the customer journey. By using clear CTAs, compelling storytelling, and engaging formatting, we help turn visitors into loyal customers.`,
+  },
+].map((panel) => (
           <motion.div
             key={panel.id}
             className="mb-4 overflow-hidden rounded-xl"

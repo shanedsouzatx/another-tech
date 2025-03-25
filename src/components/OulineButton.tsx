@@ -16,7 +16,7 @@ const OutlineButton: React.FC<ButtonProps> = ({
   const handleChat = () => {
     if (window.Tawk_API) {
       window.Tawk_API.maximize();
-    }
+    } 
   };
 
   return (

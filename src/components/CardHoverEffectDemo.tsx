@@ -2,7 +2,7 @@ import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 export function CardHoverEffectDemo() {
   return (
-    <div className="max-w-5xl  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text px-2 md:px-0">
+    <div className="max-w-5xl  font-semibold  bg-gradient-to-t from-[#48128A] to-[#8B3791] text-transparent bg-clip-text uppercase bg-clip-text px-2 md:px-0">
       <HoverEffect items={projects} />
     </div>
   );

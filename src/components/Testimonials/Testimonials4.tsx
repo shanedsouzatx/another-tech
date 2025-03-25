@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion, useAnimation, useInView, AnimatePresence } from "framer-motion"
-import { Star, Quote, ChevronLeft, ChevronRight, Heart, Award, TrendingUp, ThumbsUp, Sparkles } from "lucide-react"
+import {  Quote, ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
 import Image from "next/image"
 
 export default function  TestimonialDesign4()  {
@@ -146,7 +146,7 @@ export default function  TestimonialDesign4()  {
   
     return (
       <div
-        className="py-16 px-4 md:px-8 bg-gradient-to-br from-[#5516B1] to-[#7a42d9] text-black overflow-hidden"
+        className="py-16 px-4 md:px-8 bg-gradient-to-b from-[#48128A]  to-[#8B3791]  text-black overflow-hidden"
         ref={containerRef}
       >
         <div className="max-w-6xl mx-auto relative ">
@@ -169,7 +169,7 @@ export default function  TestimonialDesign4()  {
             >
               <Quote className="h-8 w-8 text-white" />
             </motion.div>
-            <h2 className="text-3xl text-white md:text-4xl font-bold mb-4">Client Success Stories</h2>
+            <h2 className="text-3xl text-white  bg-gradient-to-t from-[#BCBEC0] to-[#FFFFFF] text-transparent bg-clip-text uppercase md:text-4xl font-bold mb-4">CLIENTS SUCCESS STORIES</h2>
             <p className="text-white/80 max-w-2xl mx-auto">
               Our clients achieve extraordinary results. Here are some of their stories.
             </p>
@@ -212,7 +212,7 @@ export default function  TestimonialDesign4()  {
                 initial="enter"
                 animate="center"
                 exit="exit"
-                className="!bg-gradient-to-br from-gray-200 to-gray-400 backdrop-blur-lg rounded-xl p-8 md:p-12 shadow-2xl relative z-10"
+                className="!bg-gradient-to-b from-white via-white to-[#BCBEC0]/70 backdrop-blur-lg rounded-xl p-8 md:p-12 shadow-2xl relative z-10"
               >
                 <motion.div
                   className="absolute -top-6 -left-6 w-12 h-12 rounded-full bg-[#9c6dff] text-white flex items-center justify-center"
@@ -296,7 +296,7 @@ export default function  TestimonialDesign4()  {
                       setCurrentIndex(index)
                     }}
                     className={`h-[24px] w-[24px]  rounded-full transition-all duration-300 ${
-                      index === currentIndex ? "w-[24px] bg-white" : "w-[10px] bg-white/40"
+                      index === currentIndex ? "w-[24px] bg-white" : "w-[5px] h-[5px] bg-white/40"
                     }`}
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
