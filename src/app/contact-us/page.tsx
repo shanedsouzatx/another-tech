@@ -30,7 +30,7 @@ function Contact() {
         <BannerSlider1 />
       </div>
     </section>
-    <div className="!pb-11 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50  ">
+    <div className="!pb-11 -mt-8 !bg-[url('https://res.cloudinary.com/dhggagqst/image/upload/v1742503688/White_Bg-08_rsfc7s.png')] bg-cover bg-center bg-no-repeat -z-50  ">
 
 <ContactForm/>
 <Location/>

@@ -13,7 +13,7 @@ const ThankYou = () => {
     <Navbar2/>
     <section>
       {/* Thank You Section */}
-      <div className="bg-[#044E8B] flex justify-center text-white pt-28 pb-20 md:pt-44 md:pb-28">
+      <div className="bg-gradient-to-b from-[#48128A] to-[#8B3791] flex justify-center text-white pt-28 pb-20 md:pt-44 md:pb-28">
         <div className="max-w-5xl flex flex-col items-center text-center">
           <FaCheckCircle className="text-6xl md:text-8xl mb-6 text-[#FFD700]" />
           <h1 className="text-4xl md:text-5xl font-bold mb-5">Thank You!</h1>

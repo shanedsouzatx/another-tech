@@ -23,7 +23,7 @@ import {
 } from "@/data/services";
 import AllInOneCombo from "@/components/AllInOneCombo";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 
 const ECommerce = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -485,7 +485,7 @@ const ECommerce = () => {
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );

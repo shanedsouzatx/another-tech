@@ -17,7 +17,7 @@ import GradientButton from "@/components/GradientButton";
 import OutlineButton from "@/components/OulineButton";
 import LeadForm from "@/components/LeadForm";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 
 const VideoAnimation = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -568,7 +568,7 @@ const VideoAnimation = () => {
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );

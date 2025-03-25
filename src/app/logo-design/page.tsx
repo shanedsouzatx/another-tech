@@ -16,7 +16,7 @@ import Modal from "@/components/Modal/Modal";
 import { heroBgImgSrc } from "@/constants/CloudinaryImgUrl";
 import { closeModal, openModal } from "@/app/utils/HelperFunction";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 const LogoDesign = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   return (
@@ -786,7 +786,7 @@ const LogoDesign = () => {
       {/* Projects Count */}
       <CountSection />
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );

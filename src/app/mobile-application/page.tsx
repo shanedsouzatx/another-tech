@@ -17,7 +17,7 @@ import OutlineButton from "@/components/OulineButton";
 import BusinessSection from "@/components/BusinessSection";
 import LeadForm from "@/components/LeadForm";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 
 const MobileApplication = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -618,7 +618,7 @@ const MobileApplication = () => {
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );

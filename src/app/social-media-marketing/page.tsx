@@ -18,7 +18,7 @@ import OutlineButton from "@/components/OulineButton";
 import { closeModal, openModal } from "../utils/HelperFunction";
 import Modal from "@/components/Modal/Modal";
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
+import Footer1 from "@/components/Services/Footer/Footer1";
 
 const SocialMediaMarketing = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -429,7 +429,7 @@ const SocialMediaMarketing = () => {
       <CountSection />
 
       <Modal isOpen={isModalOpen} onClose={() => closeModal(setIsModalOpen)} />
-      <Footer/>
+      <Footer1/>
     </section>
     </>
   );
