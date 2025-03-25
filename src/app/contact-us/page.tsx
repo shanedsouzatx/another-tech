@@ -6,15 +6,14 @@ import BannerSlider1 from "@/components/Anees/BannerSlider1";
 
 import { contactHeroImgSrc } from "@/constants/CloudinaryImgUrl";
 import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
-
+import Navbar2 from "@/components/Anees/Navbar2";
 import ContactForm from "@/components/Anees/ContactForm";
 import Location from "@/components/Location/Location";
 import Footer1 from "@/components/Services/Footer/Footer1";
 function Contact() {
   return (
     <>
-    <Navbar/>
+    <Navbar2/>
     <section>
       {/* Hero Section */}
       <HeroSection
